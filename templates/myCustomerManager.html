@@ -1,0 +1,114 @@
+<ion-view view-title="我的客户经理">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myCustomerManagerCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="myCustomerManagerCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myCustomerManagerCtrl.init()">
+
+        <div class="taskDiv container" style="margin-top: 0;">
+            <div class="list listNoBorder" style="margin-bottom: 0px;">
+                <div class="item item-icon-right disable-user-behavior" style="padding: 0;border-top: none;border-bottom: 1px solid #f5f5f5;">
+                    <span class="input-label">中国银行上海分行浦东支行</span>
+                </div>
+            </div>
+            <table class="table taskTable">
+               <!-- <thead>
+                <tr>
+                    <th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">太平洋保险金融保险事业部一部</th>
+                    <th style="border-bottom: 1px solid #f5f5f5;">
+                    </th>
+                </tr>
+                </thead>-->
+                <tbody>
+                <tr>
+                    <td>姓名</td>
+                    <td class="textEnd">王二小(0072)</td>
+                </tr>
+                <tr>
+                    <td>手机号</td>
+                    <td class="textEnd">18728382345</td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td class="textEnd">876377232@163.com</td>
+                </tr>
+                <tr>
+                    <td>职位</td>
+                    <td class="textEnd">客户经理</td>
+                </tr>
+                <tr>
+                    <td>部门</td>
+                    <td class="textEnd">贷款部</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="taskDiv container">
+            <table class="table taskTable">
+                <tbody>
+                <tr>
+                    <td>姓名</td>
+                    <td class="textEnd">万格德(0022)</td>
+                </tr>
+                <tr>
+                    <td>手机号</td>
+                    <td class="textEnd">17776439908</td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td class="textEnd">764883222@163.com</td>
+                </tr>
+                <tr>
+                    <td>职位</td>
+                    <td class="textEnd">客户经理</td>
+                </tr>
+                <tr>
+                    <td>部门</td>
+                    <td class="textEnd">贷款部</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="taskDiv container">
+            <table class="table taskTable">
+                <tbody>
+                <tr>
+                    <td>姓名</td>
+                    <td class="textEnd">刘思(0028)</td>
+                </tr>
+                <tr>
+                    <td>手机号</td>
+                    <td class="textEnd">18777733882</td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td class="textEnd">38474992@163.com</td>
+                </tr>
+                <tr>
+                    <td>职位</td>
+                    <td class="textEnd">客户经理</td>
+                </tr>
+                <tr>
+                    <td>部门</td>
+                    <td class="textEnd">贷款部</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </ion-content>
+
+
+    <dropdown class="dropup fixed-button" id="dropdown-menu-noFinish">
+        <dropdown-toggle>
+            <button on-touch="myCustomerManagerCtrl.goMyOutTeamAdd()">
+                <span class="button icon ion-plus"></span>
+            </button>
+        </dropdown-toggle>
+    </dropdown>
+</ion-view>

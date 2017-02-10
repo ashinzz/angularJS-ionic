@@ -1,0 +1,74 @@
+<ion-view view-title="内外机构关联管理">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="inOutConnectDetailCtrl.goBack()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="inOutConnectDetailCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">银行信息详情
+                <span class="item-note">第一级</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">机构代码
+                <span class="item-note">20022015</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">机构名称
+                <span class="item-note">中国银行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">地址
+                <span class="item-note">徐汇区桂平路481号</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">邮政编码
+                <span class="item-note">100101</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">上级机构
+                <span class="item-note">中国银行</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">所属CPIC业务机构</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">分公司
+                <span class="item-note">中国银行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">中支公司
+                <span class="item-note">中国银行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">支公司
+                <span class="item-note">徐汇区中国银行</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">协议信息</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">合作类型
+                <span class="item-note">合作类型</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">协议号
+                <span class="item-note">88832293</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">合作时间起
+                <span class="item-note">2016-08-22</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">合作时间止
+                <span class="item-note">2016-08-29</span>
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar style="padding: 0;height: 50px;">
+        <div class="bottomDiv" ng-show="inOutConnectDetailCtrl.isShowMore">
+            <div class="bottomDivTwo">
+                <div class="bottomChange" style="border-bottom: 0;" on-touch="inOutConnectDetailCtrl.goInOutConnectDetailChange()">修改</div>
+                <div class="bottomDelete">删除</div>
+            </div>
+            <div></div>
+        </div>
+
+        <div class="col-xs-4" on-touch="inOutConnectDetailCtrl.moreBtn()">
+            <div class="moreBtn"></div>
+        </div>
+        <button class="btn col-xs-8" style="border-radius: 0;color: #FFFFFF;background-color: #e83344;"
+                on-touch="inOutConnectDetailCtrl.goAddLower()">添加下级
+        </button>
+    </ion-footer-bar>
+</ion-view>

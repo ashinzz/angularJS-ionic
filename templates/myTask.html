@@ -1,0 +1,325 @@
+<ion-view view-title="我的任务" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myTaskCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+    <!--<i class="icon icon glyphicon glyphicon-search" on-touch="myTaskCtrl.goTaskSearch()" style="top: 32px;right: 5px;"></i>-->
+    <!--</ion-nav-buttons>-->
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="myTaskCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <!--<div class="myTaskContent scroll-content ionic-scroll  has-header" style="overflow-y:scroll;" ng-init="myTaskCtrl.init()">-->
+    <!--&lt;!&ndash;<div class="row pt10 mb10" id="div_task_head">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="myTask bt-tab col-xs-6 active" id="noFinish">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="bt-tab-text">未完成任务</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="myTask bt-tab col-xs-6" id="finished">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="bt-tab-text">任务查询</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div class="container" style="background-color: #ffffff;">-->
+    <!--<div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[0])"-->
+    <!--ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[0].choose]">全部-->
+    <!--</div>-->
+    <!--<div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[1])"-->
+    <!--ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[1].choose]">综合-->
+    <!--</div>-->
+    <!--<div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[2])"-->
+    <!--ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[2].choose]">提醒-->
+    <!--</div>-->
+    <!--<div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[3])"-->
+    <!--ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[3].choose]">商机-->
+    <!--</div>-->
+    <!--<div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[4])"-->
+    <!--ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[4].choose]">续保-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div id="div_task_noFinish">-->
+    <!--&lt;!&ndash;<div class="row" ng-repeat="item in noFinishTaskList">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="col-xs-12 plr0">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="panel panel-default">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="panel-heading">{{item.heading}}<span class="redistribution">重新分配</span></div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<ul class="list-group" on-touch="myTaskCtrl.goTaskDetail(item)">&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="list-group-item">任务标题：<span>{{item.title}}</span></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="list-group-item">任务状态：<span>{{item.status}}</span></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="list-group-item">提交时间：<span>{{item.submitTime}}</span></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div class="taskDiv container">-->
+    <!--<table class="table taskTable">-->
+    <!--<thead>-->
+    <!--<tr>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">拜访交通银行客户经理</th>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;">-->
+    <!--<span class="redistribution" on-touch="myTaskCtrl.goRedistribution()">重新分配</span>-->
+    <!--</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody on-touch="myTaskCtrl.goTaskDetail(item)">-->
+    <!--<tr>-->
+    <!--<td>任务标题</td>-->
+    <!--<td class="textEnd">拜访客户</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>任务状态</td>-->
+    <!--<td class="textEnd">未完成</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>提交时间</td>-->
+    <!--<td class="textEnd">2016-08-23</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
+    <!--<div class="taskDiv container">-->
+    <!--<table class="table taskTable">-->
+    <!--<thead>-->
+    <!--<tr>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">拜访交通银行客户经理</th>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;">-->
+    <!--<span class="redistribution" on-touch="myTaskCtrl.goRedistribution()">重新分配</span>-->
+    <!--</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody on-touch="myTaskCtrl.goTaskDetail(item)">-->
+    <!--<tr>-->
+    <!--<td>任务标题</td>-->
+    <!--<td class="textEnd">拜访客户</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>任务状态</td>-->
+    <!--<td class="textEnd">未完成</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>提交时间</td>-->
+    <!--<td class="textEnd">2016-08-23</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
+    <!--<div class="taskDiv container">-->
+    <!--<table class="table taskTable">-->
+    <!--<thead>-->
+    <!--<tr>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">拜访交通银行客户经理</th>-->
+    <!--<th style="border-bottom: 1px solid #f5f5f5;">-->
+    <!--<span class="redistribution" on-touch="myTaskCtrl.goRedistribution()">重新分配</span>-->
+    <!--</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody on-touch="myTaskCtrl.goTaskFollowUp1()">-->
+    <!--<tr>-->
+    <!--<td>任务标题</td>-->
+    <!--<td class="textEnd">拜访客户</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>任务状态</td>-->
+    <!--<td class="textEnd">未完成</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>提交时间</td>-->
+    <!--<td class="textEnd">2016-08-23</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
+
+    <!--</div>-->
+    <!--<div id="div_task_finished" style="margin-top: 12px;">-->
+    <!--<div class="mb15">-->
+    <!--<div style="margin: 0;padding: 15px 10px;" class="list list-inset">-->
+    <!--<div class="item item-input col-xs-9" style="height: 30px;padding: 0;padding-left: 1rem;border: 1px solid #ddd;">-->
+    <!--<input type="text" placeholder="请输入团队名称">-->
+    <!--</div>-->
+    <!--<div class="col-xs-2 searchBtn" style="margin-top: 0;"></div>-->
+    <!--<div class="col-xs-1 searchCondition fr" type="button" data-toggle="collapse" data-target="#collapse-search"></div>-->
+    <!--</div>-->
+    <!--<form class="form-horizontal  collapse" id="collapse-search">-->
+    <!--<div class="well list listNoBorder">-->
+
+    <!--<div class="item item-input"-->
+    <!--style=" padding-left: 0;">-->
+    <!--<span class="input-label">任务类型</span> <input type="text"-->
+    <!--placeholder="请输入任务类型" class="inputTextRight">-->
+    <!--</div>-->
+    <!--<div class="item item-input"-->
+    <!--style="border-top: 1px solid #f5f5f5;  padding-left: 0;">-->
+    <!--<span class="input-label">任务状态</span> <input type="text"-->
+    <!--placeholder="请输入任务状态" class="inputTextRight">-->
+    <!--</div>-->
+    <!--<div class="item item-input"-->
+    <!--style="border-top: 1px solid #f5f5f5; padding-left: 0;">-->
+    <!--<span class="input-label">提交时间</span> <input type="text"-->
+    <!--placeholder="请输入提交时间" class="inputTextRight">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; <div class="mb15">-->
+    <!--<div class="row" style="background-color: #fff;padding-top: 10px;padding-bottom: 10px;">-->
+    <!--<div class="col-xs-12 search-by">-->
+    <!--<div class="div-auto-complate">-->
+    <!--<div class="input-group">-->
+    <!--<input type="text" class="form-control auto-complate-toggle" id="customer" placeholder="请输入团队名称">-->
+    <!--<span class="input-group-btn">-->
+    <!--<button class="btn searchBtn btn-default" type="button" id="task_query" ng-click="vm.taskQuery()">-->
+    <!--<span class="glyphicon glyphicon-search" id="btn_task_query"></span>-->
+    <!--</button>-->
+    <!--</span>-->
+    <!--<span class="input-group-btn">-->
+    <!--<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse-search">-->
+    <!--<span class="glyphicon glyphicon-th-large"></span>-->
+    <!--</button>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<form class="form-horizontal paddingLR15 collapse" id="collapse-search">-->
+    <!--<div class="well">-->
+    <!--<div class="form-group">-->
+    <!--<label for="rwbh" class="col-xs-4 control-label">任务标题:</label>-->
+    <!--<div class="col-xs-8">-->
+    <!--<input type="text" class="form-control" id="search_task_id" value="" placeholder="任务标题">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label for="rwmc" class="col-xs-4 control-label">任务状态:</label>-->
+    <!--<div class="col-xs-8">-->
+    <!--<input type="text" class="form-control" id="search_task_title" placeholder="任务状态">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label for="rwbh" class="col-xs-4 control-label">提交时间:</label>-->
+    <!--<div class="col-xs-8">-->
+    <!--<div class="select dropdown">-->
+    <!--<input type="text" class="form-control dropdown-toggle" id="task_main" data-toggle="dropdown" placeholder="提交时间">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div> &ndash;&gt;-->
+    <!--<div class="row" ng-repeat="item in finishedTaskList">-->
+    <!--<div class="col-xs-12 plr0">-->
+    <!--<div class="panel panel-default">-->
+    <!--<div class="panel-heading">{{item.heading}}</div>-->
+    <!--<ul class="list-group" on-touch="myTaskCtrl.goTaskDetail(item)">-->
+    <!--<li class="list-group-item">任务标题：<span>{{item.title}}</span></li>-->
+    <!--<li class="list-group-item">任务状态：<span>{{item.status}}</span></li>-->
+    <!--<li class="list-group-item">提交时间：<span>{{item.submitTime}}</span></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <ion-content ng-init="myTaskCtrl.init()">
+        <div class="container" style="background-color: #ffffff;">
+            <div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[0])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[0].choose]">全部
+            </div>
+            <div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[1])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[1].choose]">综合
+            </div>
+            <div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[2])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[2].choose]">提醒
+            </div>
+            <div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[3])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[3].choose]">商机
+            </div>
+            <div class="fl planChooseDiv" on-touch="myTaskCtrl.chooseTask(myTaskCtrl.taskChooseObj[4])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[myTaskCtrl.taskChooseObj[4].choose]">续保
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-top: 10px;margin-bottom: 0;">
+            <div class="item item-title" ng-click="myTaskCtrl.isShowSubtasks()"
+                 style="margin: -1px 16px;padding: 16px 0;font-weight: normal;">拜访交通银行客户经理
+            </div>
+            <div class="cancelTask" on-touch="">取消任务</div>
+        </div>
+        <div ng-show="myTaskCtrl.showSubtasks">
+            <div class="taskDiv container" style="margin-top: 0;border-top: 1px solid #f5f5f5;">
+                <table class="table taskTable">
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td class="textEnd">
+                            <span class="redistribution" on-touch="myTaskCtrl.goRedistribution()">重新分配</span>
+                        </td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>任务类型</td>
+                        <td class="textEnd">拜访</td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>任务状态</td>
+                        <td class="textEnd">完成</td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-18</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="taskDiv container" style="margin-top: 0;border-top: 1px solid #f5f5f5;">
+                <table class="table taskTable">
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td class="textEnd">
+                            <span class="redistribution" on-touch="myTaskCtrl.goRedistribution()">重新分配</span>
+                        </td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>任务类型</td>
+                        <td class="textEnd">拜访</td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>任务状态</td>
+                        <td class="textEnd">完成</td>
+                    </tr>
+                    <tr ng-click="myTaskCtrl.goTaskDetail()">
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-18</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-top: 10px;margin-bottom: 0;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;font-weight: normal;">拜访交通银行客户经理
+
+            </div>
+            <span class="cancelTask" on-touch="">取消任务</span>
+        </div>
+
+        <div class="list listNoBorder" style="margin-top: 10px;margin-bottom: 0;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;font-weight: normal;">拜访交通银行客户经理
+
+            </div>
+            <span class="cancelTask" on-touch="">取消任务</span>
+        </div>
+    </ion-content>
+
+    <dropdown class="dropup fixed-button" id="dropdown-menu-noFinish">
+        <!--<div class="dropdown-menu ">-->
+        <!--&lt;!&ndash;<div class="dropup-buttons">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a class="button" on-touch="myTaskCtrl.addTask()">新建任务</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <dropdown-toggle>
+            <button on-touch="myTaskCtrl.addTask()">
+                <span class="button icon ion-plus"></span>
+            </button>
+        </dropdown-toggle>
+    </dropdown>
+</ion-view>

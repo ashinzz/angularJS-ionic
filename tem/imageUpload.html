@@ -1,0 +1,39 @@
+<ion-view view-title="图片上传" zooming="true">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="imageUploadCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="imageUploadCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="imageUploadCtrl.init()">
+        <div class="list listUpdateImg">
+            <label class="item topTitle">
+                <span>上传图片</span>
+            </label>
+
+            <div class="updateDiv">
+                <div class="addImg" id="addImg">
+                    <!--<div>-->
+                        <!--<img src="img/errorBack.png" alt="" style="width: 76px;height: 76px;" ng-click="showBigImage('img/errorBack.png')">-->
+                    <!--</div>-->
+                    <div>
+                        <img src="img/errorBack.png" alt="" style="width: 76px;height: 76px;" ng-click="imageUploadCtrl.showBigImg()">
+                    </div>
+                </div>
+                <div class="addF">
+                    <input accept="image/*" type="file" class="addFm" id=""/>
+                    <p>身份证</p>
+                </div>
+                <div class="addF">
+                    <input accept="image/*" type="file" class="addFm" id="upLoad"/>
+                    <p>其他证件</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+    <div class="bigImgDiv pinch-zoom" ng-show="imageUploadCtrl.isShowBigImg" ng-click="imageUploadCtrl.showSmallImg()">
+        <img src="img/errorBack.png" alt="" class="">
+    </div>
+</ion-view>

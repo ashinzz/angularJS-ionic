@@ -1,0 +1,76 @@
+<ion-view view-title="注册">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="registeredCtrl.goBack()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="registeredCtrl.init()" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div class="registerTopIcon"></div>
+        </div>
+
+        <div>
+            <div class="registerFormList item-select ionDrop">
+                <div class="fl registerBank"></div>
+                <!--<input type="text" placeholder="请选择所在金融机构" class="fl"/>-->
+                <select class="registerSelect" ng-options="pros.name for pros in registeredCtrl.institutions" ng-model="registeredCtrl.pro" ng-change="registeredCtrl.select()">
+                    <option value="">请选择所在金融机构</option>
+                    <!--<option>上海分公司</option>-->
+                    <!--<option>北京分公司</option>-->
+                    <!--<option>深圳分公司</option>-->
+                </select>
+            </div>
+            <div class="registerFormList item-select ionDrop" ng-show="registeredCtrl.showInstitutions2">
+                <div class="fl registerBank"></div>
+                <select class="registerSelect" ng-options="cit.name for cit in registeredCtrl.institutions2" ng-model="registeredCtrl.city" ng-change="registeredCtrl.select2()">
+                    <option value="">请选择二级机构</option>
+                </select>
+            </div>
+            <div class="registerFormList item-select ionDrop" ng-show="registeredCtrl.showInstitutions3">
+                <div class="fl registerBank"></div>
+                <select class="registerSelect" ng-options="are for are in registeredCtrl.institutions3" ng-model="registeredCtrl.area" ng-change="registeredCtrl.select3()">
+                    <option value="">请选择三级机构</option>
+                </select>
+            </div>
+            <div class="registerFormList item-select ionDrop" ng-show="registeredCtrl.showInstitutions4">
+                <div class="fl registerBank"></div>
+                <select class="registerSelect" ng-options="cit.name for cit in registeredCtrl.institutions" ng-model="city" ng-change="">
+                    <option value="">请选择四级机构</option>
+                </select>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerLabor"></div>
+                <input type="text" placeholder="请输入工号" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerName"></div>
+                <input type="text" placeholder="请输入姓名" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerNum"></div>
+                <input type="tel" placeholder="请输入手机号码" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerEmail"></div>
+                <input type="email" placeholder="请输入电子邮箱" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerBank"></div>
+                <input type="email" placeholder="请输入部门" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerBank"></div>
+                <input type="email" placeholder="请输入职位" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerPass"></div>
+                <input type="password" placeholder="请输入密码" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerPass"></div>
+                <input type="password" placeholder="请重新输入密码" class="fl"/>
+            </div>
+        </div>
+
+        <a href="" class="button button-assertive button-block registerBtn" on-touch="registerCtrl.goHomepage()">注册</a>
+    </ion-content>
+</ion-view>

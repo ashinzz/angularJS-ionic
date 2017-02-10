@@ -1,0 +1,26 @@
+<ion-view view-title="重新分配" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="redistributionCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="redistributionCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="redistributionCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">接收人</span>
+                <select style="color: #aaaaaa;padding-left:0px;padding-right:12px;">
+                    <option>请选择</option>
+                    <option>张珊</option>
+                    <option>力士</option>
+                    <option>王二</option>
+                </select>
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar style="padding: 0;height: 50px;">
+        <a href="" style="margin: 0 15px;background-color: #e83344;color: #FFFFFF;" class="btn btn-danger btn-block btn-lg" on-touch="redistributionCtrl.goBack()">确定</a>
+    </ion-footer-bar>
+</ion-view>

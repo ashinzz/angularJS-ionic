@@ -1,0 +1,93 @@
+<ion-view view-title="上级机构-中国银行">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="addLowerCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="addLowerCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">现价下级</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 12px;padding-left: 0;">银行代码
+                <span class="item-note" style="padding-right: 20px;">2022015</span>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">银行名称</span>
+                <input type="text" placeholder="请输入银行名称" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">组织机构代码</span>
+                <input type="text" placeholder="请输入组织机构代码" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">邮政编码</span>
+                <input type="text" placeholder="请输入邮政编码" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">联系人</span>
+                <input type="text" placeholder="请输入联系人" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">联系手机</span>
+                <input type="text" placeholder="请输入联系手机" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">联系电话</span>
+                <input type="text" placeholder="请输入联系电话" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">地址</span>
+                <input type="text" placeholder="请输入地址" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+        </div>
+
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">选择所属CPIC业务机构</div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">分公司</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">中支公司</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">支公司</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">协议信息</div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">合作类型</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                </select>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">协议号</span>
+                <input type="text" placeholder="请输入协议号" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">合作时间起</span>
+                <input type="text" class="inputTextRight" mobiscroll-date="finishedDate" mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}" placeholder="请选择时间">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">合作时间止</span>
+                <input type="text" class="inputTextRight" mobiscroll-date="finishedDate" mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}" placeholder="请选择时间">
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch="addLowerCtrl.goBack()" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

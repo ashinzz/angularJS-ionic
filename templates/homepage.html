@@ -1,0 +1,80 @@
+<ion-view view-title="首页">
+    <ion-nav-buttons side="right">
+        <i class="icon icon homePageRight" on-touch="homepageCtrl.goSettings()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="homepageCtrl.init()">
+        <div class="homepage">
+            <div class="fl homeTop">
+                <div class="homeTask" ng-click="homepageCtrl.goMyTask()"></div>
+                <p>我的任务</p>
+            </div>
+            <div class="fl homeTop">
+                <div class="homePerformance" ng-click="homepageCtrl.goMyPerformance()"></div>
+                <p>我的绩效</p>
+            </div>
+            <div class="fl homeTop">
+                <div class="homeSale" ng-click="homepageCtrl.goPlanSale()"></div>
+                <p>我的方案</p>
+            </div>
+            <div class="fl homeTop">
+                <div class="homeManage" ng-click="homepageCtrl.goPersonnelManage()"></div>
+                <p>我的团队</p>
+            </div>
+        </div>
+
+        <div class="homepageTwo">
+            <h4 style="font-size: 17px;">我的绩效</h4>
+
+            <div>
+                <div class="homeMyPerformance fl" ng-click="homepageCtrl.goMyPerformance()">
+                    <p>年度保费</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="premium"></div>
+                </div>
+                <div class="homeMyPerformance fl" ng-click="homepageCtrl.goMyPerformance()">
+                    <p>达成率</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="accomplish"></div>
+                </div>
+                <div class="homeMyPerformance fl noBorder" ng-click="homepageCtrl.goMyPerformance()">
+                    <p>公司排名</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="cast"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homepageThree">
+            <h4 style="font-size: 17px;">我的任务</h4>
+
+            <div style="margin: 0 10px;">
+                <div class="homeMyTask" ng-click="homepageCtrl.goMyTask()">
+                    <span class="composite fl"></span>
+                    <!--<i class="taskNum fr"></i>-->
+                    <i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">22</i>
+                    <p>综合任务</p>
+                </div>
+                <div class="homeMyTask" ng-click="homepageCtrl.goMyTask()">
+                    <span class="commerce fl"></span>
+                    <i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">220</i>
+                    <p>商机任务</p>
+                </div>
+                <div class="homeMyTask" ng-click="homepageCtrl.goMyTask()">
+                    <span class="replenish fl"></span>
+                    <i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">2</i>
+                    <p>续保任务</p>
+                </div>
+                <div class="homeMyTask" ng-click="homepageCtrl.goMyTask()" style="border-bottom: 0;">
+                    <span class="remindTask fl" style="background-size: 57px 29px;"></span>
+                    <!--<i class="taskNum1 fr"></i>-->
+                    <i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">22</i>
+                    <p>提醒任务</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

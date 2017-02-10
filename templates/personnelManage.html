@@ -1,0 +1,39 @@
+<ion-view view-title="我的团队">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="personnelManageCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="personnelManageCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-icon-left" on-touch="personnelManageCtrl.goMyInternalTeam()" style="margin: -1px 16px;padding-left: 38px;padding-right: -1px;">
+                <i class="icon personListIcon cpicInUser" style="height: 27px;left: 0;"></i>
+                我的内部团队
+            </div>
+            <div class="item item-icon-left" on-touch="personnelManageCtrl.goMyOutTeam()" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 38px;padding-right: -1px;">
+                <i class="icon personListIcon cpicSaleTeam" style="height: 27px;left: 0;"></i>
+                我的外部团队
+            </div>
+        </div>
+
+        <!--<div class="list listNoBorder">-->
+            <!--<div class="item item-icon-left" on-touch="personnelManageCtrl.goInOutConnect()" style="margin: -1px 16px;padding-left: 38px;padding-right: -1px;">-->
+                <!--<i class="icon personListIcon inOutCon" style="height: 27px;left: 0;"></i>-->
+                <!--内外机构关联管理-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="list listNoBorder">-->
+            <!--<div class="item item-icon-left" on-touch="personnelManageCtrl.goOutTeamManage()" style="margin: -1px 16px;padding-left: 38px;padding-right: -1px;">-->
+                <!--<i class="icon personListIcon outTeamMan" style="height: 27px;left: 0;"></i>-->
+                <!--外部团队管理-->
+            <!--</div>-->
+            <!--<div class="item item-icon-left" on-touch="personnelManageCtrl.goCustomerManager()" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 38px;padding-right: -1px;">-->
+                <!--<i class="icon personListIcon customerManager" style="height: 27px;left: 0;"></i>-->
+                <!--客户经理-->
+            <!--</div>-->
+        <!--</div>-->
+    </ion-content>
+</ion-view>

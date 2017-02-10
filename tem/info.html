@@ -1,0 +1,107 @@
+<ion-view view-title="info">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="infoCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="infoCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="infoCtrl.init()">
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">车牌号
+                <span class="item-note">沪A88888</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">投保人姓名
+                <span class="item-note">张三</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">被投保人姓名
+                <span class="item-note">王二</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">总保额
+                <span class="item-note">1000</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">总保费
+                <span class="item-note">999</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">联系方式
+                <span class="item-note">180548145741</span>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">配送方式</span>
+                <div class="text-div" style="padding-right: 0;">
+                    <div class="">
+						<span class="option_left orderEvent" style="margin-right: 20px;">
+							<span class="radiocheck" ng-show="!infoCtrl.invite"></span>
+                            <span class="radiochecked" ng-show="infoCtrl.invite"></span>自取
+						</span>
+                        <span class="orderEvent">
+							<span class="radiocheck" ng-show="!infoCtrl.send"></span>
+                            <span class="radiochecked" ng-show="infoCtrl.send"></span>寄送
+						</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">险种类别
+                <span class="item-note">车险</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">保单号
+                <span class="item-note">45614561456</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">起保日期
+                <span class="item-note">2016-02-01</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">终保日期
+                <span class="item-note">2016-09-06</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">险种类别
+                <span class="item-note">寿险</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">保单号
+                <span class="item-note">45156165165</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">起保日期
+                <span class="item-note">2016-02-01</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">终保日期
+                <span class="item-note">2016-09-06</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">投保险种</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">车险车险
+                <span class="item-note"></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">保单保费/保额
+                <span class="item-note">9999/165</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">起始日期/终保日期
+                <span class="item-note">2016-09-16/2017-12-31</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">车险车险
+                <span class="item-note"></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">保单保费/保额
+                <span class="item-note">9999/165</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">起始日期/终保日期
+                <span class="item-note">2016-09-16/2017-12-31</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">车险车险
+                <span class="item-note"></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">保单保费/保额
+                <span class="item-note">9999/165</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">起始日期/终保日期
+                <span class="item-note">2016-09-16/2017-12-31</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

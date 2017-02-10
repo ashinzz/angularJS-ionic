@@ -1,0 +1,88 @@
+<ion-view view-title="未完成商机">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="unfinishedBusinessCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon rightHomeIcon" on-touch="unfinishedBusinessCtrl.goHomePage()"></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="unfinishedBusinessCtrl.init()">
+        <div id="div_task_noFinish">
+            <div class="taskDiv container" style="margin-top: 0;" ng-click="unfinishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="taskDiv container" ng-click="unfinishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="taskDiv container" ng-click="unfinishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </ion-content>
+
+    <dropdown class="dropup fixed-button" id="dropdown-menu-noFinish" on-touch="unfinishedBusinessCtrl.goNewBusiness()">
+        <dropdown-toggle>
+            <button on-touch="">
+                <span class="button icon ion-plus"></span>
+            </button>
+        </dropdown-toggle>
+    </dropdown>
+</ion-view>

@@ -1,0 +1,111 @@
+<ion-view view-title="任务跟进" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="missionFollowCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="missionFollowCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="missionFollowCtrl.init()">
+        <div style="background-color: #FFFFFF;">
+            <div class="missionFollowDiv" style="font-size: 18px;padding: 15px 0 15px 10px;">跟进选择</div>
+            <div class="row missionFollowDiv">
+                <div class="fl col-30" on-touch="missionFollowCtrl.information()">
+                    <span class="radiocheck" ng-show="!missionFollowCtrl.showInformation"></span>
+                    <span class="radiochecked" ng-show="missionFollowCtrl.showInformation"></span>信息补充
+                </div>
+                <div class="fl col-30" on-touch="missionFollowCtrl.visit()">
+                    <span class="radiocheck" ng-show="!missionFollowCtrl.showVisit"></span>
+                    <span class="radiochecked" ng-show="missionFollowCtrl.showVisit"></span>预约拜访
+                </div>
+                <div class="fl col-30" on-touch="missionFollowCtrl.results()">
+                    <span class="radiocheck" ng-show="!missionFollowCtrl.showResults"></span>
+                    <span class="radiochecked" ng-show="missionFollowCtrl.showResults"></span>预约结果
+                </div>
+            </div>
+
+            <div ng-show="missionFollowCtrl.showInformation">
+                <div class="missionFollowDiv" style="font-size: 18px;padding: 15px 0 15px 10px;">补充原因</div>
+                <div class="row missionFollowDiv">
+                    <div class="fl col-30" on-touch="missionFollowCtrl.infoIncomplete()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showInfoIncomplete"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showInfoIncomplete"></span>信息不完整
+                    </div>
+                    <div class="fl col-30" on-touch="missionFollowCtrl.picNoclear()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showPicNoclear"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showPicNoclear"></span>图片不清晰
+                    </div>
+                    <div class="fl col-30" on-touch="missionFollowCtrl.infoNocorrect()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showInfoNocorrect"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showInfoNocorrect"></span>信息不正确
+                    </div>
+                </div>
+                <!--<textarea name="" id="" cols="30" rows="10" placeholder="请填写具体信息需要补充" class="remarkDiv"></textarea>-->
+                <div class="item" style="border: 0;">
+                    <textarea class="itemTextArea" rows="3" maxlength="200" placeholder="请填写具体信息需要补充"></textarea>
+                </div>
+            </div>
+
+            <div ng-show="missionFollowCtrl.showVisit">
+                <div class="missionFollowDiv" style="font-size: 18px;padding: 15px 0 15px 10px;">预约事项</div>
+                <div class="row missionFollowDiv">
+                    <div class="fl col-30" on-touch="missionFollowCtrl.appointment()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showAppointment"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showAppointment"></span>预约电话
+                    </div>
+                    <div class="fl col-30" on-touch="missionFollowCtrl.toDoor()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showToDoor"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showToDoor"></span>预约上门
+                    </div>
+                </div>
+                <div class="missionFollowDiv" style="font-size: 18px;padding: 15px 0 15px 10px;">预约日期</div>
+                <div class="row missionFollowDiv">
+                    <div class="fl col-33">
+                        <input type="text" style="height: 100%;background-color: #FFFFFF;Color: rgb(0, 91, 172);" mobiscroll-date="finishedDate" mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}" placeholder="请输入预约日期">
+                    </div>
+                </div>
+                <!--<textarea name="" id="" cols="30" rows="10" placeholder="请填写你的进度描述(50字内)" class="remarkDiv"></textarea>-->
+                <div class="item" style="border: 0;">
+                    <textarea class="itemTextArea" rows="3" maxlength="200" placeholder="请填写你的进度描述(50字内)"></textarea>
+                </div>
+            </div>
+
+            <div ng-show="missionFollowCtrl.showResults">
+                <div class="missionFollowDiv" style="font-size: 18px;padding: 15px 0 15px 10px;">商机结果</div>
+                <div class="row missionFollowDiv">
+                    <div class="fl col-30" on-touch="missionFollowCtrl.refusedVisit()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showRefusedVisit"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showRefusedVisit"></span>购买
+                    </div>
+                    <div class="fl col-30" on-touch="missionFollowCtrl.successVisit()">
+                        <span class="radiocheck" ng-show="!missionFollowCtrl.showSuccessVisit"></span>
+                        <span class="radiochecked" ng-show="missionFollowCtrl.showSuccessVisit"></span>不购买
+                    </div>
+                </div>
+                <div class="row missionFollowDiv" ng-show="missionFollowCtrl.showRefusedVisit" style="padding: 13px 0 13px 10px;">
+                    <div class="fl col-90">
+                        <input type="text" placeholder="请输入保单号">
+                    </div>
+                </div>
+                <div class="row missionFollowDiv" ng-show="missionFollowCtrl.showRefusedVisit" style="padding: 13px 0 13px 10px;">
+                    <div class="fl col-90">
+                        <input type="text" placeholder="请输入投保日期">
+                    </div>
+                </div>
+                <div class="row missionFollowDiv" ng-show="missionFollowCtrl.showRefusedVisit" style="padding: 13px 0 13px 10px;">
+                    <div class="fl col-90">
+                        <input type="text" placeholder="请输入保费">
+                    </div>
+                </div>
+                <!--<textarea name="" id="" cols="30" rows="10" placeholder="请填写你的商机结果描述(50字内)" class="remarkDiv"></textarea>-->
+                <div class="item" style="border: 0;">
+                    <textarea class="itemTextArea" rows="3" maxlength="200" placeholder="请和相关人员联系"></textarea>
+                </div>
+            </div>
+
+            <div class="container">
+                <a href="" class="btn btn-danger btn-block btn-lg" on-touch="" style="margin: 3rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

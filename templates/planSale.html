@@ -1,0 +1,62 @@
+<ion-view view-title="方案销售">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="planSaleCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="planSaleCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="planSaleCtrl.init()">
+        <div class="container" style="background-color: #ffffff;">
+            <div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[0])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[0].choose]">收藏
+            </div>
+            <div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[1])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[1].choose]">意外
+            </div>
+            <div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[2])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[2].choose]">货运
+            </div>
+            <div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[3])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[3].choose]">家财
+            </div>
+            <div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[4])"
+                 ng-class="{true:'planChooseBor',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[4].choose]">责任
+            </div>
+            <!--<div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[5])"-->
+                 <!--ng-class="{true:'planChooseCol',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[5].choose]">农机-->
+            <!--</div>-->
+            <!--<div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[6])"-->
+                 <!--ng-class="{true:'planChooseCol',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[6].choose]">车险-->
+            <!--</div>-->
+            <!--<div class="fl planChooseDiv" on-touch="planSaleCtrl.chooseSale(planSaleCtrl.planChooseObj[7])"-->
+                 <!--ng-class="{true:'planChooseCol',fasle:'planChooseSta'}[planSaleCtrl.planChooseObj[7].choose]">金融保-->
+            <!--</div>-->
+        </div>
+
+        <div class="container" style="background-color: #ffffff;margin-top: 12px;">
+            <div class="list list-inset" style="margin: 10px 0;">
+                <label class="item item-input" style="height: 35px;">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="search" ng-model="planSaleCtrl.searchword" autocorrect="off" placeholder="请输入方案名称" style="padding: 0;font-weight: 300; text-align: left;">
+                </label>
+            </div>
+
+            <div class="planSaleList container" style="padding-left: 0;" ng-repeat="list in planSaleCtrl.list">
+                <p on-touch="planSaleCtrl.goPlanSaleDetail(list.name)">{{list.name}}</p>
+                <div class="fr listKeep" on-touch="planSaleCtrl.keepp(list)" ng-show="list.keep">
+                    <div></div>
+                    <p>收藏</p>
+                </div>
+                <div class="fr listKeepY" on-touch="planSaleCtrl.keepp(list)" ng-show="!list.keep">
+                    <div></div>
+                    <p>已收藏</p>
+                </div>
+                <div class="fr listShare" on-touch="">
+                    <div></div>
+                    <p>分享</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

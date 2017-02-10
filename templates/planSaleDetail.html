@@ -1,0 +1,47 @@
+<ion-view view-title="方案销售详情" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="planSaleDetailCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="planSaleDetailCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <div class="planSaleDetailContent scroll-content ionic-scroll  has-header" style="overflow-y:scroll;" ng-init="planSaleDetailCtrl.init()">
+		<ion-list class="actEdit-list list-level2">
+			<ion-item class="item-input item-select ionDropNew1">
+           		<span class="input-label itemTitle">展业方式</span>
+                <div class="col allLastTime disable-user-behavior"  >
+    				<select style="color: #aaaaaa;" id="industryMode"  ng-model="industryMode" ng-change="planSaleDetailCtrl.changeIndustryMode()">
+                        <option selected="" value="请选择">请选择</option>
+                        <!--<option value="公司直营店">公司直营店</option>-->
+                        <!--<option value="直拓">直拓</option>-->
+                        <option value="普通专业代理(不含车商)">普通专业代理(不含车商)</option>
+                        <option value="个人营销">个人营销</option>
+                        <option value="银行代理">银行代理</option>
+                        <option value="普通经纪(不含车商)">普通经纪(不含车商)</option>
+                  		</select>
+    			</div>
+          	</ion-item>
+            <ion-item class="item-input item disable-user-behavior" on-touch="planSaleDetailCtrl.dealershipSearch()" ng-show="dealershipShow">
+           		<span class="input-label itemTitle">代理点</span>
+           		<div class="text-div ng-binding" >{{dataList.dealership}}</div>
+           		<i class="glyphicon glyphicon-search searchEdit"></i>
+            </ion-item>
+            <ion-item class="item-input item-select ionDropNew1" ng-show="benefitFinInstShow">
+           		<span class="input-label itemTitle">受益金融机构</span>
+                <div class="col allLastTime disable-user-behavior"  >
+    				<select style="color: #aaaaaa;" id="bank"  ng-model="bankMode"  >
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="中国银行">中国银行</option>
+                        <option value="建设银行">建设银行</option>
+                        <option value="工商银行">工商银行</option>
+                  		</select>
+    			</div>
+          	</ion-item>
+		</ion-list>
+
+        <ion-footer-bar style="padding: 0;height: 50px;">
+            <a href="" style="margin: 0 15px;background-color: #e83344;color: #FFFFFF;" class="btn btn-danger btn-block btn-lg" on-touch="planSaleDetailCtrl.goInitPrd()">确定</a>
+        </ion-footer-bar>
+	</div>
+</ion-view>

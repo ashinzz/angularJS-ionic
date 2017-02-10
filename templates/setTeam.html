@@ -1,0 +1,84 @@
+<ion-view view-title="创建团队">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="setTeamCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="setTeamCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">总行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">一级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">二级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">三级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">四级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">五级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">六级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">团队名称</span>
+                <input type="text" placeholder="请输入团队名称(必填)" class="inputTextRight">
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch="setTeamCtrl.goBack()" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

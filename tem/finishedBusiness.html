@@ -1,0 +1,100 @@
+<ion-view view-title="已完成商机">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="finishedBusinessCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon rightHomeIcon" on-touch="finishedBusinessCtrl.goHomePage()"></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="finishedBusinessCtrl.init()">
+        <!--搜索框-->
+        <div style="margin: 0;padding: 15px 16px;" class="list list-inset">
+            <div class="item item-input col-xs-9" style="height: 29px;padding: 0;padding-left: 1rem;width: 78%;">
+                <input type="text" placeholder="请输入客户姓名">
+            </div>
+            <div class="col-xs-2 searchBtn" on-touch="finishedBusinessCtrl.showSearchDetail()"></div>
+            <div class="col-xs-1 searchCondition fr" style="margin-right: 0px;"
+                 on-touch="finishedBusinessCtrl.showSearchResult()"></div>
+        </div>
+
+        <div class="list listNoBorder" ng-show="finishedBusinessCtrl.isShowSearchResult">
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;padding-right: 12px;">
+                <span class="input-label">任务时间起</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;padding-right: 12px;">
+                <span class="input-label">任务时间止</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+        </div>
+
+        <div id="div_task_noFinish" ng-show="finishedBusinessCtrl.isShowSearchDetail">
+            <div class="taskDiv container" style="margin-top: 0;" on-touch="finishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="taskDiv container" on-touch="finishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="taskDiv container" on-touch="finishedBusinessCtrl.goMyBusiness()">
+                <table class="table taskTable">
+                    <tbody on-touch="">
+                    <tr>
+                        <td>客户姓名</td>
+                        <td class="textEnd">张小敏</td>
+                    </tr>
+                    <tr>
+                        <td>客户类型</td>
+                        <td class="textEnd">团队</td>
+                    </tr>
+                    <tr>
+                        <td>方案选择</td>
+                        <td class="textEnd">无忧</td>
+                    </tr>
+                    <tr>
+                        <td>提交时间</td>
+                        <td class="textEnd">2016-10-27</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

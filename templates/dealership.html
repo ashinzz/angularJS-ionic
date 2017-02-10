@@ -1,0 +1,86 @@
+<ion-view view-title="代理点" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="dealershipCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <div class="dealershipContent scroll-content ionic-scroll  has-header" style="overflow-y:scroll;"
+         ng-init="dealershipCtrl.init()">
+        <!--<div class="searchBox">-->
+            <!--<div class="list list-inset" style="margin: 5px 20px;">-->
+                <!--<label class="item item-input" style="height: 35px;padding-left: 10px;">-->
+                    <!--<i class="icon ion-search placeholder-icon"></i>-->
+                    <!--<input type="text" placeholder="请输入..." style="font-weight: 300; text-align: left;">-->
+                <!--</label>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div style="background-color: #fff;padding-bottom: 40px;padding-top: 20px;">
+            <ion-list class="list-level2 first-item-border-top">
+                <ion-item class="item" style="background-color: #F6F6F6;border-color: #F5F5F5;">
+                    <div class="row ">
+                        <div class="col-30 large-black-item">代理点代码</div>
+                        <div class="col-70 large-black-item">代理点名称</div>
+                    </div>
+                </ion-item>
+                <ion-item class="item" style="border-color: #F5F5F5;">
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <!-- <span></span> -->
+                            <input name="companyName" type="radio" value="T91">
+                            <span class=""></span><span>T91</span>
+                            <!-- T91 -->
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">上海笙峰汽车销售有限公司</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T92">
+                            <span class=""></span><span>D79</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">中国农业银行股份有限公司上海青浦支行</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T93">
+                            <span class=""></span><span>U28</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">深圳市保网电子商务有限公司上海分公司</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T94">
+                            <span class=""></span><span>T85</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">上海泓义智能通讯系统有限公司</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T94">
+                            <span class=""></span><span>U02</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">上海越也汽车销售服务有限公司</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T94">
+                            <span class=""></span><span>U03</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">北京汇丰保险经纪有限公司广州分公司</div>
+                    </div>
+                    <div class="row companyName">
+                        <div class="col-30 small-black-item">
+                            <input name="companyName" type="radio" value="T94">
+                            <span class=""></span><span>U09</span>
+                        </div>
+                        <div class="col-70 small-black-item companyTxt">上海云珑投资顾问有限公司</div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="button-bar padding" style="padding-top: 30px;" on-touch="dealershipCtrl.goPlanSaleDetail()">
+            <a class="button button-assertive disable-user-behavior" style="background-color: #e83344;color: #FFFFFF;">确定</a>
+        </div>
+    </div>
+</ion-view>

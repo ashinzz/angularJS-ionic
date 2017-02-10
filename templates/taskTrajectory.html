@@ -1,0 +1,56 @@
+<ion-view view-title="任务轨迹" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="taskTrajectoryCtrl.goBack()"></i>
+    </ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<i class="icon rightHomeIcon" on-touch="taskTrajectoryCtrl.goHomePage()"></i>
+	</ion-nav-buttons>
+
+    <ion-content class="taskTrajectoryContent" ng-init="taskTrajectoryCtrl.init()" >
+	    <div class="row" style="padding-top: 30px;">
+		    <div class="col-10 footLine">
+			    <span class="footPrint active"></span>
+		    </div>
+		    <div class="col-85">
+			    <ul>
+				    <li class="headingText active">【现场拜访】拜访已完成</li>
+				    <li class="list-group-item"><span class="clock"></span>2015-10-18 11:28</li>
+			    </ul>
+			</div>
+	    </div>
+	    <div class="row">
+	   		<div class="col-10 footLine">
+			    <span class="footPrint"></span>
+		    </div>
+		    <div class="col-85">
+			    <ul>
+				    <li class="headingText">【现场拜访】进行沟通，确定拜访时间</li>
+				    <li class="list-group-item"><span class="clock"></span>2015-10-18 11:28</li>
+		    	</ul>
+			</div>
+	    </div>
+	    <div class="row">
+	   		<div class="col-10 footLine">
+			    <span class="footPrint"></span>
+		    </div>
+		    <div class="col-85">
+			    <ul>
+				    <li class="headingText">【拜访跟进】已对客户进行电话拜访沟通，客户要求俩天后当面拜访</li>
+				    <li class="list-group-item"><span class="clock"></span>2015-10-18 11:28</li>
+		    	</ul>
+			</div>
+	    </div>
+	    <div class="row">
+	   		<div class="col-10 footLine">
+			    <span class="footPrint"></span>
+		    </div>
+		    <div class="col-85">
+			    <ul>
+				    <li class="headingText">【电话拜访】已预约，三天后与客户联系确定电话拜访</li>
+				    <li class="list-group-item"><span class="clock"></span>2015-10-18 11:28</li>
+		    	</ul>
+			</div>
+	    </div>
+	    <div>
+	</ion-content>
+</ion-view>

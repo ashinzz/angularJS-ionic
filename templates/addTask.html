@@ -1,0 +1,105 @@
+<ion-view view-title="新建任务" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="addTaskCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <div class="addTaskContent scroll-content ionic-scroll  has-header" style="overflow-y:scroll;" ng-init="addTaskCtrl.init()">
+	    <ion-list class="actEdit-list list-level2">
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">任务类型</span>
+						<div class="text-div">
+							<div class="">
+								<span class="option_left taskType" id="visit"> 
+									<input name="taskTypeName" type="radio" value="拜访">
+									<span class="active"></span>拜访
+								</span> 
+								<span class="orderEvent taskType" id="train"> 
+									<input name="taskTypeName" type="radio" value="培训">
+									<span class=""></span>培训
+								</span>
+								<span class="orderEvent taskType" id="meeting"> 
+									<input name="taskTypeName" type="radio" value="会议">
+									<span class=""></span>会议
+								</span>
+							</div>
+						</div>
+					</ion-item>
+					<ion-item class="item-input">
+		            	<span class="input-label itemTitle">客户类型</span>
+						<div class="text-div">
+							<div class="">
+								<span class="option_left customTypeHide" id="groups" style="display: none;"> 
+									<input name="customTypeName" type="radio" value="团体">
+									<span class="active"></span>团体
+								</span> 
+								<span class="option_left customType" id="group"> 
+									<input name="customTypeName" type="radio" value="团体">
+									<span class="active"></span>团体
+								</span> 
+								<span class="orderEvent customType" id="person"> 
+									<input name="customTypeName" type="radio" value="个人">
+									<span class=""></span>个人
+								</span>
+							</div>
+						</div>
+					</ion-item>
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">任务标题</span>
+		            	<input class="label-input" type="text"  maxlength="50"  placeholder="" required ng-trim="true">
+		            </ion-item>
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">客户名称</span>
+		            	<input class="label-input" type="text"  maxlength="50"  placeholder="" required ng-trim="true">
+		            </ion-item>
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">客户电话</span>
+		            	<input class="label-input" type="text"  maxlength="50"  placeholder="" required ng-trim="true">
+		            </ion-item>
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">拜访地点</span>
+		            	<input class="label-input" type="text"  maxlength="50"  placeholder="" required ng-trim="true">
+		            </ion-item>
+		            <ion-item class="item-input">
+		            	<span class="input-label itemTitle">完成时间</span>
+		            	<!-- <input type="text"  mobiscroll-date="finishedDate"  mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}"  placeholder="请选择完成时间"> -->
+		            	<input type="text"  mobiscroll-datetime="finishedDate" mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}" placeholder="请选择完成时间">
+		            </ion-item>
+		            <!--<ion-item class="item-input item-select ionDropNew">-->
+		           		<!--<span class="input-label itemTitle">接收人</span>-->
+		                <!--<div class="col allLastTime disable-user-behavior">-->
+		    				<!--<select style="color: #aaaaaa;">-->
+		                        <!--<option selected="" value="请选择">请选择</option>-->
+		                        <!--<option value="北京">北京</option>-->
+		                        <!--<option value="上海">上海</option>-->
+		                        <!--<option value="深圳">深圳</option>-->
+	                   		<!--</select>-->
+		    			<!--</div>-->
+            		<!--</ion-item>-->
+			<ion-item class="item-input  plr10" on-touch="addTaskCtrl.goReceivingTeam()" style="padding-left: 0;padding-right: 0;">
+				<span class="input-label itemTitle">接收人</span>
+				<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+			</ion-item>
+	            	<ion-item class="item" style="border-bottom: 0;">
+						<div class="">
+							<span class="itemTitle">拜访内容</span>
+							<textarea class="itemTextArea" rows="3" maxlength="200" placeholder=""></textarea>
+						</div>
+					</ion-item>
+		            
+		    </ion-list>
+		  		<!--<ion-item class="item-input mt15 plr10" on-touch="addTaskCtrl.taskFollowUp()">-->
+	            	<!--<span class="input-label itemTitle">任务跟进</span>-->
+	            	<!--<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>-->
+	            <!--</ion-item>-->
+	            <!--<ion-item class="item-input  plr10" on-touch="addTaskCtrl.taskTrajectory()">-->
+	            	<!--<span class="input-label itemTitle">任务轨迹</span>-->
+	            	<!--<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>-->
+	            <!--</ion-item>-->
+		<div class="container">
+			<a href="" class="btn btn-block btn-lg" on-touch="addTaskCtrl.goBack()" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">提交</a>
+		</div>
+	</div>
+</ion-view>

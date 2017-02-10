@@ -1,0 +1,81 @@
+<ion-view view-title="内外机构关联管理">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="inOutConnectCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="inOutConnectCtrl.init()">
+        <div class="list listNoBorder">
+            <!--<div class="item item-icon-right item-icon-left" style="margin: -1px 16px;padding: 16px 0;">-->
+                <!--<i class="glyphicon glyphicon-plus" ng-show="inOutConnectCtrl.isAddIcon" on-touch="inOutConnectCtrl.showNext()"></i>-->
+                <!--<i class="glyphicon glyphicon-minus" ng-show="!inOutConnectCtrl.isAddIcon" on-touch="inOutConnectCtrl.showNext()"></i>-->
+                <!--<span on-touch="inOutConnectCtrl.showNext()">中国招商银行</span>-->
+                <!--<i class="icon ionChRight" on-touch="inOutConnectCtrl.showDetail()"></i>-->
+            <!--</div>-->
+            <!--<div class="item item-icon-right tem-icon-left" style="margin: -1px 16px;padding: 16px 0;" ng-show="inOutConnectCtrl.isShowNext">-->
+                <!--<i class="glyphicon glyphicon-plus" style="color: #FFFFFF;"></i>-->
+                <!--<span>上海工商银行</span>-->
+                <!--<i class="icon ionChRight"></i>-->
+            <!--</div>-->
+
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;" on-touch="inOutConnectCtrl.goInOutConnectLevel()">中国银行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">中国招商银行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">美国花旗银行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">中国农业银行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">上海浦发银行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">瑞士银行
+                <i class="icon ionChRight"></i>
+            </div>
+        </div>
+
+        <!--<div class="list listNoBorder" ng-show="!inOutConnectCtrl.isShowDetail">-->
+            <!--<div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">银行信息详情-->
+                <!--<span class="item-note">第一级</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">机构代码-->
+                <!--<span class="item-note">20022015</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">机构名称-->
+                <!--<span class="item-note">上海招商银行</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">地址-->
+                <!--<span class="item-note">徐汇区桂平路481号</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">邮政编码-->
+                <!--<span class="item-note">100101</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">上级机构-->
+                <!--<span class="item-note">中国招商银行</span>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="list listNoBorder" ng-show="!inOutConnectCtrl.isShowDetail">-->
+            <!--<div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">所属CPIC业务机构</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">分公司-->
+                <!--<span class="item-note">上海招商银行</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">中支公司-->
+                <!--<span class="item-note">招商银行</span>-->
+            <!--</div>-->
+            <!--<div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">支公司-->
+                <!--<span class="item-note">徐汇区招商银行</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    </ion-content>
+
+    <ion-footer-bar style="padding: 0;height: 50px;">
+        <a href="" style="margin: 0 15px;background-color: #e83344;color: #FFFFFF;" class="btn btn-danger btn-block btn-lg" on-touch="inOutConnectCtrl.goInOutConnectAdd()">添加一级</a>
+    </ion-footer-bar>
+</ion-view>

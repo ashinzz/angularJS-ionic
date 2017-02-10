@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/ui-bootstrap-0.13.4-csp.css" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="lib/datepicker/css/datepicker.css">-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1.custom/jquery-ui.structure.css">
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+
+    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/styleeee.css" rel="stylesheet">-->
+
+    <link href="lib/mobiscroll/css/mobiscroll.custom-2.17.1.min.css" rel="stylesheet">
+    <link href="lib/mobiscroll/css/datetime.css" rel="stylesheet">
+
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script src="dist/lrz.all.bundle.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/jquery-1.11.1.js"></script>
+
+    <!--<script src="lib/datepicker/js/datepicker.js"></script>-->
+    <script src="lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="lib/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/ionic/js/angular-messages.min.js"></script>
+    <script src="lib/ionic/js/angular-touch.min.js"></script>
+    <script src="lib/bootstrap/ui-bootstrap-0.13.4.min.js"></script>
+    <script src="lib/bootstrap/ui-bootstrap-tpls-0.13.4.min.js"></script>
+    <script src="lib/ngcordova/ng-cordova.min.js"></script>
+    <script src="lib/mobiscroll/js/mobiscroll.custom-2.17.1.min.js"></script>
+
+    <script src="lib/pinchroom/pinchzoom.js"></script>
+
+    <!--<script src="lib/Chart.js"></script>-->
+    <!--<script src="lib/chart/chart.js"></script>-->
+    <!--<script src="lib/chart/Chart.bundle.js"></script>-->
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--     <script src="cordova.js"></script> -->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!--<script src="js/directive/picDirective.js"></script>-->
+    <script src="js/controller/controllers.js"></script>
+</head>
+<body ng-app="starter" class="platform-android platform-webview platform-cordova platform-ios">
+<ion-side-menus>
+    <ion-side-menu-content drag-content="true" class="bar-positive">
+        <!--主页面顶部bar-->
+        <ion-nav-bar animation="nav-title-slide-ios7"
+                     class="bar-positive"
+                     back-button-type="button-icon"
+                     back-button-icon="ion-arrow-left-c">
+        </ion-nav-bar>
+        <!--主页面内容-->
+        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+</body>
+</html>

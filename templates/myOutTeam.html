@@ -1,0 +1,38 @@
+<ion-view view-title="我的外部团队">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myOutTeamCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="myOutTeamCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myOutTeamCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 5px 0 10px 0;" on-touch="myOutTeamCtrl.goMyCustomerManager()">
+                <span class="input-label">中国银行浦东支行事业一部</span>
+                <span class="itemColorGray">中国银行上海分行浦东支行</span>
+                <i class="icon ionChRight1"></i>
+            </div>
+            <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 5px 0 10px 0;">
+                <span class="input-label">中国工商银行浦东支行事业一部</span>
+                <span class="itemColorGray">中国工商银行上海分行浦东支行</span>
+                <i class="icon ionChRight1"></i>
+            </div>
+            <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 5px 0 10px 0;">
+                <span class="input-label">中国农业银行浦东支行事业一部</span>
+                <span class="itemColorGray">中国农业银行上海分行浦东支行</span>
+                <i class="icon ionChRight1"></i>
+            </div>
+            <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 5px 0 10px 0;">
+                <span class="input-label">中国建设银行浦东支行事业一部</span>
+                <span class="itemColorGray">中国建设银行上海分行浦东支行</span>
+                <i class="icon ionChRight1"></i>
+            </div>
+            <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 5px 0 10px 0;">
+                <span class="input-label">招商银行浦东支行事业一部</span>
+                <span class="itemColorGray">招商银行上海分行浦发支行</span>
+                <i class="icon ionChRight1"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

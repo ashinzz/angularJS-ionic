@@ -1,0 +1,40 @@
+<ion-view view-title="注册">
+    <ion-content ng-init="registerCtrl.init()" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="registerTopIcon"></div>
+        </div>
+
+        <div>
+            <div class="registerFormList">
+                <div class="fl registerBank"></div>
+                <input type="text" placeholder="请输入银行" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerLabor"></div>
+                <input type="text" placeholder="请输入工号" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerName"></div>
+                <input type="text" placeholder="请输入姓名" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerNum"></div>
+                <input type="tel" placeholder="请输入手机号码" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerEmail"></div>
+                <input type="email" placeholder="请输入电子邮箱" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerPass"></div>
+                <input type="password" placeholder="请输入密码" class="fl"/>
+            </div>
+            <div class="registerFormList">
+                <div class="fl registerPass"></div>
+                <input type="password" placeholder="请重新输入密码" class="fl"/>
+            </div>
+        </div>
+
+        <a href="" class="button button-positive button-block registerBtn" on-touch="registerCtrl.goHomepage()">注册</a>
+    </ion-content>
+</ion-view>

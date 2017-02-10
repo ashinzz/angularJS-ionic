@@ -1,0 +1,44 @@
+<ion-view view-title="关于">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="topicCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="topicCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="topicCtrl.init()">
+        <div class="topicTopPic"></div>
+
+        <div class="list" style="background-color: #ffffff;">
+            <div class="item item-icon-left" style="border: 0;margin: -1px 16px;padding-left: 38px;">
+                <i class="icon topicIcon topicIconHotline" style="height: 27px;left: 0;"></i>
+                客服热线
+                <span class="item-note" style="color: #444444;">
+                    <!--<a href="tel:95500">95500</a>-->
+                    <a href="wtai://wp//mc;95500">95500</a>
+                    <!--<a href="wtai://wp/ap;13764567708;">将10086存储至电话簿 </a> -->
+                </span>
+            </div>
+            <div class="item item-icon-left"
+                 style="border: 0;margin: -1px 16px;padding-left: 38px;border-top: 0.5px solid #f5f5f5;">
+                <i class="icon topicIcon topicIconWebsite" style="height: 27px;left: 0;"></i>
+                网站
+                <span class="item-note" style="color: #444444;">http://www.cpic.com.cn</span>
+            </div>
+        </div>
+
+        <div class="list" style="background-color: #FFFFFF;">
+            <div class="item item-icon-left" style="border: 0;margin: -1px 16px;padding-left: 38px;">
+                <i class="icon topicIcon topicIconVersion" style="height: 27px;left: 0;"></i>
+                版本
+                <span class="item-note" style="color: #444444;">0.0.1</span>
+            </div>
+        </div>
+    </ion-content>
+
+    <div class="topicCo">
+        <p>版权所有©️中国太平洋保险(集团)股份有限公司</p>
+        <p>CopyRight©️China Pacific Insurance(group) Co.,Ltd..</p>
+        <p>All Rights Reserved</p>
+    </div>
+</ion-view>

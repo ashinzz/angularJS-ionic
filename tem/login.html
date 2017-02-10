@@ -1,0 +1,69 @@
+<ion-view view-title="登录">
+    <ion-content ng-init="loginCtrl.init()">
+        <div class="logBack">
+            <div class="logChooseDiv" ng-show="loginCtrl.isShowChooseDiv">
+                <div on-touch="loginCtrl.chooseSalesman()" ng-class="{true:'logChooseDiv1',fasle:'logChooseDiv2'}[loginCtrl.isChooseSalesman]">业务员</div>
+                <div on-touch="loginCtrl.chooseManager()" ng-class="{true:'logChooseDiv1',fasle:'logChooseDiv2'}[!loginCtrl.isChooseSalesman]">客户经理</div>
+                <div class="logChooseDiv3" on-touch="loginCtrl.showLogDiv()">下一步</div>
+            </div>
+
+            <div class="logCon" ng-show="!loginCtrl.isShowChooseDiv">
+                <img src="img/homeLeft2.png" alt="">
+                <div class="logDiv">
+                    <div class="list" style="padding: 10px;border: 1px solid #FFFFFF;">
+                        <!--<label class="row">-->
+                            <!--<div class="fl col-50 loginChoose" on-touch="loginCtrl.chooseSalesman()">-->
+                                <!--<span class="radiocheck" ng-show="!loginCtrl.showSalesman"></span>-->
+                                <!--<span class="radiochecked" ng-show="loginCtrl.showSalesman"></span>&nbsp;业务员-->
+                            <!--</div>-->
+                            <!--<div class="fl col-50 loginChoose" on-touch="loginCtrl.chooseCustomerManager()">-->
+                                <!--<span class="radiocheck" ng-show="loginCtrl.showSalesman"></span>-->
+                                <!--<span class="radiochecked" ng-show="!loginCtrl.showSalesman"></span>&nbsp;客户经理-->
+                            <!--</div>-->
+                        <!--</label>-->
+                        <label class="item item-input item-select ionDrop" ng-show="loginCtrl.showSalesman">
+                            <span class="input-label">分公司：</span>
+                            <select>
+                                <option>上海分公司</option>
+                                <option selected>北京分公司</option>
+                                <option>深圳分公司</option>
+                            </select>
+                        </label>
+                        <label class="item item-input" ng-show="loginCtrl.showSalesman">
+                            <span class="input-label">工号:</span>
+                            <input type="password">
+                        </label>
+                        <label class="item item-input" ng-show="loginCtrl.showSalesman">
+                            <span class="input-label">密码:</span>
+                            <input type="text">
+                        </label>
+
+                        <label class="item item-input" ng-show="!loginCtrl.showSalesman">
+                            <span class="input-label">手机号:</span>
+                            <input type="text">
+                        </label>
+                        <label class="item item-input" ng-show="!loginCtrl.showSalesman">
+                            <span class="input-label">密码:</span>
+                            <input type="text">
+                        </label>
+
+                        <div class="fr" ng-show="loginCtrl.showSalesman">
+                            <p class="logForget fr">记住用户名</p>
+                            <span class="getIcon" on-touch="loginCtrl.getPassword()" ng-show="loginCtrl.getPass"></span>
+                            <span class="getIconY" on-touch="loginCtrl.getPassword()" ng-show="!loginCtrl.getPass"></span>
+                        </div>
+
+                        <div ng-show="!loginCtrl.showSalesman">
+                            <p class="logForget fl" style="color: #F39F27;" on-touch="loginCtrl.goRegistered()">马上注册</p>
+                            <p class="logForget fr">记住手机号</p>
+                            <span class="getIcon" on-touch="loginCtrl.getPassword()" ng-show="loginCtrl.getPass"></span>
+                            <span class="getIconY" on-touch="loginCtrl.getPassword()" ng-show="!loginCtrl.getPass"></span>
+                        </div>
+
+                        <a href="" class="btn btn-block btn-primary" style="margin-top: 40px;font-size: 16px;" on-touch="loginCtrl.goHomePageM()">登&nbsp;&nbsp;&nbsp;录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

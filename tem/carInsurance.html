@@ -1,0 +1,116 @@
+<ion-view view-title="人意险">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="carInsuranceCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="carInsuranceCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="carInsuranceCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">申请号</span>
+                <input type="number" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">联系人</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">联系电话</span>
+                <input type="tel" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">业务渠道</span>
+                <select style="color: #aaaaaa;padding-right: 11px;">
+                    <option selected>请选择</option>
+                    <option>A</option>
+                </select>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">代理手续费</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">代理点名称</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">代理点</span>
+                <select style="color: #aaaaaa;padding-right: 11px;" ng-click="carInsuranceCtrl.goSearchCode()">
+                    <option selected>请选择</option>
+                    <!--<option>A</option>-->
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">经办人代码</span>
+                <select style="color: #aaaaaa;padding-right: 11px;" ng-click="carInsuranceCtrl.goSearchCode()">
+                    <option selected>请选择</option>
+                    <!--<option>A</option>-->
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">寿险营销员代码</span>
+                <select style="color: #aaaaaa;padding-right: 11px;" ng-click="carInsuranceCtrl.goSearchCode()">
+                    <option selected>请选择</option>
+                    <!--<option>A</option>-->
+                </select>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">经办人名称</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">寿险营销员</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">共保协议号</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">统保代码</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">支付方式</span>
+                <select style="color: #aaaaaa;padding-right: 11px;">
+                    <option selected>请选择</option>
+                    <option>A</option>
+                </select>
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">上年保单号</span>
+                <input type="text" placeholder="请输入" class="inputTextRight">
+            </div>
+        </div>
+
+        <div class="list backWhite">
+            <label class="item topTitle" style="padding-bottom: 0;">
+                <span>备注</span>
+            </label>
+
+            <div class="item" style="border: 0;">
+                <!--<textarea name="" id="" cols="30" rows="10" class="remarkDiv" placeholder="请填写备注信息"></textarea>-->
+                <textarea class="itemTextArea" rows="3" maxlength="200" placeholder=""
+                          style="margin-top: 0;"></textarea>
+            </div>
+        </div>
+
+        <ion-item class="item-input mt15 plr10" style="border: 0;border-bottom: 1px solid #F5F5F5;"
+                  on-touch="carInsuranceCtrl.goImageUpload()">
+            <span class="input-label itemTitle">上传影像</span>
+            <i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+        </ion-item>
+        <ion-item class="item-input plr10" style="border-top: 1px solid #f5f5f5;"
+                  on-touch="carInsuranceCtrl.goInsuranceType()">
+            <span class="input-label itemTitle">险种</span>
+            <i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+        </ion-item>
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch="carInsuranceCtrl.showInsuranceTypeModel()"
+               style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">任务提交</a>
+        </div>
+    </ion-content>
+</ion-view>

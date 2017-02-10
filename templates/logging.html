@@ -1,0 +1,38 @@
+<ion-view view-title="登录">
+    <ion-content ng-init="loggingCtrl.init()" class="logCon">
+        <div class="logBack">
+            <div class="backOp">
+                <div class="borderIn">
+                    <div class="list logList">
+                        <label class="item item-input item-select ionDrop" style="height: 20%;">
+                            <span class="input-label">分公司：</span>
+                            <select>
+                                <option>Blue</option>
+                                <option selected>Green</option>
+                                <option>Red</option>
+                            </select>
+                        </label>
+                        <label class="item item-input" style="height: 20%;">
+                            <span class="input-label">工&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                            <input type="text" style="text-align: right;padding-right: 15px;">
+                        </label>
+                        <label class="item item-input" style="height: 20%;">
+                            <span class="input-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                            <input type="password" style="text-align: right;padding-right: 15px;">
+                        </label>
+                        <!--<p class="logForget fr">忘记密码</p>-->
+                        <!--<a class="button button-block button-positive" on-touch="loggingCtrl.login()" style="height: 18%;">-->
+                        <!--登录-->
+                        <!--</a>-->
+                        <div class="fr">
+                            <p class="logForget fr">记住工号</p>
+                            <span class="getIcon" on-touch="loggingCtrl.getPassword()" ng-show="loggingCtrl.getPass"></span>
+                            <span class="getIconY" on-touch="loggingCtrl.getPassword()" ng-show="!loggingCtrl.getPass"></span>
+                        </div>
+                        <div class="item logBtn" on-touch="loggingCtrl.login()">登 录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,92 @@
+<ion-view view-title="搜索">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="outTeamManageSearchCtrl.goBack()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="outTeamManageSearchCtrl.init()">
+        <div style="margin: 0;padding: 15px 10px;" class="list list-inset">
+            <div class="item item-input col-xs-9" style="height: 29px;padding: 0;padding-left: 1rem;">
+                <input type="text" placeholder="请输入姓名手机号码">
+            </div>
+            <div class="col-xs-2 searchBtn" on-touch=""></div>
+            <div class="col-xs-1 searchCondition fr" on-touch="outTeamManageSearchCtrl.showSearch()"></div>
+        </div>
+
+        <div class="list listNoBorder" ng-show="outTeamManageSearchCtrl.isShowSearch">
+            <div class="item item-input item-select ionDropNew" style="margin-left: 16px;padding-left: 0;">
+                <span class="input-label">总行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">一级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">二级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">三级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">四级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">五级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">六级分行名称</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                <span class="input-label">是否启用</span>
+                <select style="color: #aaaaaa;">
+                    <option selected>是</option>
+                    <option>否</option>
+                </select>
+            </div>
+            <!--<div class="item item-input" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">-->
+            <!--<span class="input-label">团队名</span>-->
+            <!--<input type="text" placeholder="请输入团队名" class="inputTextRight">-->
+            <!--</div>-->
+        </div>
+    </ion-content>
+</ion-view>

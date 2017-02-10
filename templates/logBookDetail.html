@@ -1,0 +1,17 @@
+<ion-view view-title="工作日志" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="logBookDetailCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="logBookDetailCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="logBookDetailCtrl.init()" style="background-color: #FFFFFF;">
+        <div class="container" style="margin-top: 10px;">
+            <h4 class="text-center">我的拜访客户</h4>
+            <p style="font-size: 16px;text-indent: 20px;line-height: 30px;margin: 0 0 5px;">团长张丽丽在2016年9月18号创建了拜访任务,任务接收人为李明明,要求李明明在2016年9月27号完成拜访。</p>
+            <p style="font-size: 16px;text-indent: 20px;line-height: 30px;margin: 0 0 5px;">李明明在2016年9月18号对客户进行了电话访问,客户提出能否在2016年9月19号进行当面拜访。</p>
+            <p style="font-size: 16px;text-indent: 20px;line-height: 30px;margin: 0 0 5px;">李明明与2016年9月19号对客户进行了当面拜访,完成了这次拜访。</p>
+        </div>
+    </ion-content>
+</ion-view>

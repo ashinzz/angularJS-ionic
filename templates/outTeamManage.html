@@ -1,0 +1,270 @@
+<ion-view view-title="外部团队管理">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="outTeamManageCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="outTeamManageCtrl.init()">
+        <!--团队成员管理-->
+        <div class="performanceDiv" ng-show="outTeamManageCtrl.isShowTeamManage" style="margin-bottom: 12px;">
+            <div class="fl performance" on-touch="outTeamManageCtrl.uncheckedMember()"
+                 ng-class="{true:'bottomBorder',fasle:'nBottomBorder'}[outTeamManageCtrl.checked]">
+                <p>未选成员</p>
+            </div>
+            <div class="fl performance" on-touch="outTeamManageCtrl.checkedMember()"
+                 ng-class="{true:'bottomBorder',fasle:'nBottomBorder'}[!outTeamManageCtrl.checked]">
+                <p>已选成员</p>
+            </div>
+        </div>
+
+        <!--第二个搜索框-->
+        <div style="margin: 0;padding: 15px 10px;" class="list list-inset" ng-show="outTeamManageCtrl.isShowTwoSearch">
+            <div class="item item-input col-xs-9" style="height: 29px;padding: 0;padding-left: 1rem;">
+                <input type="text" placeholder="请输入姓名手机号码">
+            </div>
+            <div class="col-xs-2 searchBtn" on-touch=""></div>
+            <div class="col-xs-1 searchCondition fr" on-touch="outTeamManageCtrl.showHideSearch2()"></div>
+        </div>
+
+        <!--搜索框-->
+        <div style="margin: 0;padding: 15px 10px;" class="list list-inset" ng-show="outTeamManageCtrl.isShowCreatTeamBtn">
+            <div class="item item-input col-xs-9" style="height: 29px;padding: 0;padding-left: 1rem;">
+                <input type="text" placeholder="请输入团队名称">
+            </div>
+            <div class="col-xs-2 searchBtn" on-touch="outTeamManageCtrl.showSearchResult()"></div>
+            <div class="col-xs-1 searchCondition fr" on-touch="outTeamManageCtrl.showHideSearch()"></div>
+            <!--<div class="col-xs-2" on-touch="outTeamManageCtrl.showSearchResult()" style="padding: 0;">-->
+                <!--<img src="img/serchIcon2.png" alt="" style="height: 47px;">-->
+            <!--</div>-->
+            <!--<div class="conditionIconNew col-xs-1"></div>-->
+        </div>
+
+        <!--团队成员管理-->
+        <div ng-show="outTeamManageCtrl.isShowTeamManage">
+            <!--已选-->
+            <div ng-show="outTeamManageCtrl.checked">
+                <div class="list listNoBorder">
+                    <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">中国招商银行上海分行</div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">张磊(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamAddIcon"></i>
+                    </div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">王芳(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamAddIcon"></i>
+                    </div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">张晓晓(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamAddIcon"></i>
+                    </div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">夏弥(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamAddIcon"></i>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="" class="btn btn-danger btn-block btn-lg" on-touch="" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+                </div>
+            </div>
+
+            <!--未选-->
+            <div ng-show="!outTeamManageCtrl.checked">
+                <div class="list listNoBorder">
+                    <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">中国招商银行上海分行</div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">张晓晓(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamDelIcon"></i>
+                    </div>
+                    <div class="item item-icon-right" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">
+                        <span class="input-label">王敏(cpic-000123)</span>
+                        <span class="itemColorGray">13812345678&nbsp;&nbsp;&nbsp;&nbsp;已启用</span>
+                        <i class="icon teamDelIcon"></i>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="" class="btn btn-danger btn-block btn-lg" on-touch="" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--初始搜索框-->
+        <div ng-show="outTeamManageCtrl.isShowSearchCriteria">
+            <div class="list listNoBorder" ng-show="outTeamManageCtrl.isShowSearchCondition">
+                <div class="item item-input item-select ionDropNew" style="margin-left: 16px;padding-left: 0;">
+                    <span class="input-label">分公司</span>
+                    <select style="color: #aaaaaa;">
+                        <option selected>请选择</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>深圳</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                    <span class="input-label">中支公司</span>
+                    <select style="color: #aaaaaa;">
+                        <option selected>请选择</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>深圳</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select ionDropNew" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">
+                    <span class="input-label">支公司</span>
+                    <select style="color: #aaaaaa;">
+                        <option selected>请选择</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>深圳</option>
+                    </select>
+                </div>
+                <!--<div class="item item-input" style="border-top: 1px solid #f5f5f5;margin-left: 16px;padding-left: 0;">-->
+                    <!--<span class="input-label">团队名</span>-->
+                    <!--<input type="text" placeholder="请输入团队名" class="inputTextRight">-->
+                <!--</div>-->
+            </div>
+
+            <!--<div class="container">-->
+                <!--<a href="" class="btn btn-danger btn-block btn-lg" on-touch="outTeamManageCtrl.goSetTeam()"-->
+                   <!--style="margin: 5rem auto;">创建团队</a>-->
+            <!--</div>-->
+        </div>
+
+
+        <!--搜索结果-->
+        <div class="taskDiv container" ng-show="outTeamManageCtrl.isShowSearchResult"
+             on-touch="outTeamManageCtrl.showResultDetail()">
+            <table class="table taskTable">
+                <thead>
+                <tr>
+                    <th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">招商银行上海分行</th>
+                    <th style="border-bottom: 1px solid #f5f5f5;"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>关联太保机构</td>
+                    <td class="textEnd">北京分公司</td>
+                </tr>
+                <tr>
+                    <td>所属渠道机构</td>
+                    <td class="textEnd">上海市田林路</td>
+                </tr>
+                <tr>
+                    <td>团队名称</td>
+                    <td class="textEnd">开发部</td>
+                </tr>
+                <tr>
+                    <td>团队长名称</td>
+                    <td class="textEnd">小张</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="taskDiv container" ng-show="outTeamManageCtrl.isShowSearchResult"
+             on-touch="outTeamManageCtrl.showResultDetail()">
+            <table class="table taskTable">
+                <thead>
+                <tr>
+                    <th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">招商银行上海分行</th>
+                    <th style="border-bottom: 1px solid #f5f5f5;"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>关联太保机构</td>
+                    <td class="textEnd">北京分公司</td>
+                </tr>
+                <tr>
+                    <td>所属渠道机构</td>
+                    <td class="textEnd">上海市田林路</td>
+                </tr>
+                <tr>
+                    <td>团队名称</td>
+                    <td class="textEnd">开发部</td>
+                </tr>
+                <tr>
+                    <td>团队长名称</td>
+                    <td class="textEnd">小张</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="taskDiv container" ng-show="outTeamManageCtrl.isShowSearchResult"
+             on-touch="outTeamManageCtrl.showResultDetail()">
+            <table class="table taskTable">
+                <thead>
+                <tr>
+                    <th style="border-bottom: 1px solid #f5f5f5;font-size: 16px;">招商银行上海分行</th>
+                    <th style="border-bottom: 1px solid #f5f5f5;"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>关联太保机构</td>
+                    <td class="textEnd">北京分公司</td>
+                </tr>
+                <tr>
+                    <td>所属渠道机构</td>
+                    <td class="textEnd">上海市田林路</td>
+                </tr>
+                <tr>
+                    <td>团队名称</td>
+                    <td class="textEnd">开发部</td>
+                </tr>
+                <tr>
+                    <td>团队长名称</td>
+                    <td class="textEnd">小张</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--结果详情-->
+        <div class="list listNoBorder" ng-show="outTeamManageCtrl.isShowResultDetail">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">招商银行上海分行</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">关联太保机构
+                <span class="item-note">北京分公司</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">所属渠道机构
+                <span class="item-note">上海市田林路</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">团队名称
+                <span class="item-note">开发部</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">团队长名称
+                <span class="item-note">小张</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">电话号码
+                <span class="item-note">18029393333</span>
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar style="padding: 0;height: 50px;background-color: #f6f6f6;" ng-show="outTeamManageCtrl.isShowFootBtn">
+        <a href="" style="margin: 0 15px;background-color: #e83344;color: #FFFFFF;" ng-show="outTeamManageCtrl.isShowCreatTeamBtn" class="btn btn-danger btn-block btn-lg" on-touch="outTeamManageCtrl.goSetTeam()">创建团队</a>
+
+        <div class="bottomDiv" ng-show="outTeamManageCtrl.isShowMore">
+            <div class="bottomDivTwo">
+                <div class="bottomChange" style="border-bottom: 0;" on-touch="outTeamManageCtrl.goOutManageChange()">修改</div>
+                <div class="bottomDelete">删除</div>
+            </div>
+            <div></div>
+        </div>
+
+        <!--<button class="btn btn-default col-xs-4" on-touch="outTeamManageCtrl.moreBtn()">更多</button>-->
+        <div class="col-xs-4" on-touch="outTeamManageCtrl.moreBtn()" ng-show="outTeamManageCtrl.isShowResultDetail" >
+            <div class="moreBtn"></div>
+        </div>
+        <button class="btn col-xs-8"  ng-show="outTeamManageCtrl.isShowResultDetail" style="border-radius: 0;color: #FFFFFF;background-color: #e83344;" on-touch="outTeamManageCtrl.showTeamManage()">团队成员管理</button>
+    </ion-footer-bar>
+</ion-view>

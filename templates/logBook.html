@@ -1,0 +1,29 @@
+<ion-view view-title="工作日志" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="logBookCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="logBookCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="logBookCtrl.init()">
+        <div id="datepicker" on-touch=""></div>
+
+        <div class="list listNoBorder">
+            <!--<div class="item item-title" style="font-weight:normal;margin: -1px 16px;padding: 16px 0;" id="showDate">{{logBookCtrl.chooseDate}}</div>-->
+            <div class="item item-title"style="font-weight:normal;margin: -1px 16px;padding: 16px 0;">
+                <input style="background-color: #FFFFFF;width: 100%;" id="showDate" disabled/>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;"
+                 on-touch="logBookCtrl.goLogBookDetail()">我的拜访客户
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">约访中国银行上海支行浦东分行
+                <i class="icon ionChRight"></i>
+            </div>
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 16px 0;">培训 业务知识培训
+                <i class="icon ionChRight"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

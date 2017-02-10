@@ -1,0 +1,43 @@
+<ion-view view-title="内外机构关联管理">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="inOutConnectLevelCtrl.goBack()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="inOutConnectLevelCtrl.init()">
+        <div class="list listNoBorder">
+            <!--<div class="item item-icon-right item-icon-left" style="margin: -1px 16px;padding: 16px 0;">-->
+                <!--<i class="glyphicon glyphicon-plus" ng-show="inOutConnectCtrl.isAddIcon"-->
+                   <!--on-touch="inOutConnectCtrl.showNext()"></i>-->
+                <!--<i class="glyphicon glyphicon-minus" ng-show="!inOutConnectCtrl.isAddIcon"-->
+                   <!--on-touch="inOutConnectCtrl.showNext()"></i>-->
+                <!--<span on-touch="inOutConnectCtrl.showNext()">中国招商银行</span>-->
+                <!--<i class="icon ionChRight" on-touch="inOutConnectCtrl.showDetail()"></i>-->
+            <!--</div>-->
+            <!--<div class="item item-icon-right tem-icon-left" style="margin: -1px 16px;padding: 16px 0;"-->
+                 <!--ng-show="inOutConnectCtrl.isShowNext">-->
+                <!--<i class="glyphicon glyphicon-plus" style="color: #FFFFFF;"></i>-->
+                <!--<span>上海工商银行</span>-->
+                <!--<i class="icon ionChRight"></i>-->
+            <!--</div>-->
+
+            <div class="item item-icon-right item-icon-left" style="margin: -1px 16px;padding: 16px 0;padding-left: 35px;">
+                <i class="icon iconAddIcon" ng-show="inOutConnectLevelCtrl.isAddIcon" on-touch="inOutConnectLevelCtrl.showNext()"></i>
+                <i class="icon iconMinusIcon" ng-show="!inOutConnectLevelCtrl.isAddIcon" on-touch="inOutConnectLevelCtrl.showNext()"></i>
+                <span on-touch="inOutConnectLevelCtrl.showNext()">中国银行</span>
+                <i class="icon ionChRightBig" on-touch="inOutConnectLevelCtrl.goInOutConnectDetail()"></i>
+            </div>
+            <div class="item item-icon-right item-icon-left" style="margin: -1px 16px;padding: 16px 0;padding-left: 35px;" ng-show="inOutConnectLevelCtrl.isShowNext2">
+                <i class="icon iconAddIcon" ng-show="inOutConnectLevelCtrl.isAddIcon2" on-touch="inOutConnectLevelCtrl.showNext2()"></i>
+                <i class="icon iconMinusIcon" ng-show="!inOutConnectLevelCtrl.isAddIcon2" on-touch="inOutConnectLevelCtrl.showNext2()"></i>
+                <span on-touch="inOutConnectLevelCtrl.showNext2()">中国银行上海分行</span>
+                <i class="icon ionChRightBig"></i>
+            </div>
+            <div class="item item-icon-right item-icon-left" style="margin: -1px 16px;padding: 16px 0;padding-left: 35px;" ng-show="inOutConnectLevelCtrl.isShowNext3">
+                <i class="icon iconAddIcon" ng-show="inOutConnectLevelCtrl.isAddIcon3" on-touch="inOutConnectLevelCtrl.showNext3()"></i>
+                <i class="icon iconMinusIcon" ng-show="!inOutConnectLevelCtrl.isAddIcon3" on-touch="inOutConnectLevelCtrl.showNext3()"></i>
+                <span on-touch="inOutConnectLevelCtrl.showNext3()">中国银行上海分行徐汇支行</span>
+                <i class="icon ionChRightBig"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

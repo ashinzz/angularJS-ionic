@@ -1,0 +1,70 @@
+<ion-view view-title="任务跟进" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="taskFollowUpCtrl.goBack()"></i>
+    </ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<i class="icon rightHomeIcon" on-touch="taskFollowUpCtrl.goHomePage()"></i>
+	</ion-nav-buttons>
+
+    <div class="taskFollowUpContent scroll-content ionic-scroll  has-header" ng-init="taskFollowUpCtrl.init()">
+	    <ion-list>
+	    	    <ion-item class="item-input item">
+		            <div id="order">
+						<span class="option_left orderType" id="orderVisit"> 
+						    <input name="ordername" type="radio" value="预约拜访">
+							<span class="active"></span><span>预约拜访</span>
+						</span> 
+						<span class="orderType" id="orderResult"> 
+							<input name="ordername" type="radio" value="预约结果">
+							<span class=""></span><span>预约结果</span>
+						</span>
+					</div>
+	    </ion-item>
+	    <ion-item class="item-input item" id="orderEventItem">
+	            <span class="input-label itemTitle">预约事项</span>
+	            <div class="text-div">
+		            <div class="" >
+						<span class="option_left orderEvent" id="orderPhone">
+							<input name="orderEventName" type="radio" value="预约电话"><span class="active"></span>电话拜访
+						</span>
+						<span class="orderEvent" id="orderDoor">
+							<input name="orderEventName" type="radio" value="预约上门"><span class=""></span>上门拜访
+						</span>                            	
+	             	</div>
+             </div>
+	    </ion-item>
+	    <ion-item class="item-input item" id="orderResultItem">
+	            <span class="input-label itemTitle">预约结果</span>
+	            <div class="text-div">
+	            	<div class="">
+						<span class="option_left orderResult" id="refuseOrder">
+							<input name="orderResultName" type="radio" value="拒绝拜访"><span class="active"></span>拒绝拜访
+						</span>
+						<span class="orderResult" id="orderSuccess">
+							<input name="orderResultName" type="radio" value="拜访成功"><span class=""></span>拜访成功
+						</span>                            	
+             		</div>
+             </div>
+	    </ion-item>
+	    <ion-item class="item-input">
+	            	<span class="input-label itemTitle">预约日期</span>
+			<input type="text" mobiscroll-date="finishedDate" mobiscroll-options="{theme : 'android-holo-light',mode : 'scroller',lang:'zh',minWidth:minWidth,preset:'date',dateOrder:'yymmdd',endYear:2500}" placeholder="请输入预约日期">
+
+		</ion-item>
+	    <ion-item style="border-bottom: none;" id="followUpDescribe">
+					<textarea class="itemTextArea" rows="3" maxlength="200" placeholder="请填写你的进度描述(50字内)"></textarea>
+		</ion-item>
+		<ion-item style="border-bottom: none;"  id="visitDescribe">
+					<textarea class="itemTextArea" rows="3" maxlength="200" placeholder="请填写你的拜访结果描述(50字内)"></textarea>
+		</ion-item>
+		<!--<div class="button-bar padding">-->
+            <!--<a class="button button-assertive disable-user-behavior" style="background-color: #e83344;" on-touch="taskFollowUpCtrl.taskFollowUpSubmit()">确认</a>-->
+        <!--</div>-->
+
+
+	    </ion-list>
+		<div class="container">
+			<a href="" class="btn btn-block btn-lg" on-touch="taskFollowUpCtrl.goBack()" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;" on-touch="taskFollowUpCtrl.taskFollowUpSubmit()">确定</a>
+		</div>
+</div>
+</ion-view>

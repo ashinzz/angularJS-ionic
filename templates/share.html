@@ -1,0 +1,12 @@
+<ion-view view-title="分享">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="shareCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="shareCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="shareCtrl.init()" style="background-color: #444444;">
+    </ion-content>
+    <img src={{shareCtrl.url}} alt="" class="img-responsive qrcode">
+</ion-view>

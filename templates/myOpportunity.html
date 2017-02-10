@@ -1,0 +1,129 @@
+<ion-view view-title="我的商机">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myOpportunityCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon icon rightHomeIcon" on-touch=""></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myOpportunityCtrl.init()">
+        <div ng-show="!myOpportunityCtrl.showOplist">
+            <div class="list">
+                <label class="item topTitle">
+                    <span>客户信息</span>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">客户类型</span>
+                    <input type="text" placeholder="请输入" class="text-right">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">客户名称</span>
+                    <input type="text" placeholder="请输入" class="text-right">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">联系人</span>
+                    <input type="text" placeholder="请输入" class="text-right">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">电话</span>
+                    <input type="tel" placeholder="请输入" class="text-right">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">邮箱</span>
+                    <input type="email" placeholder="请输入" class="text-right">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">地址</span>
+                    <input type="text" placeholder="请输入" class="text-right">
+                </label>
+            </div>
+
+            <div class="list" style="height: 24rem;">
+                <label class="item topTitle">
+                    <span>方案</span>
+                </label>
+
+                <div>
+                    <div class="proposal fl proposalCar" on-touch="myOpportunityCtrl.showOpportunity()">
+                        <div></div>
+                        <p>车险</p>
+                    </div>
+                    <div class="proposal fl proposalUnexpected">
+                        <div></div>
+                        <p>意外险</p>
+                    </div>
+                    <div class="proposal fl proposalFreight">
+                        <div></div>
+                        <p>货运险</p>
+                    </div>
+                    <div class="proposal fl proposalPenates">
+                        <div></div>
+                        <p>家财险</p>
+                    </div>
+                    <div class="proposal fl proposalDuty">
+                        <div></div>
+                        <p>责任险</p>
+                    </div>
+                    <div class="proposal fl proposalCredit">
+                        <div></div>
+                        <p>信用保障保险</p>
+                    </div>
+                    <div class="proposal fl proposalDistribution">
+                        <div></div>
+                        <p>电商物流货运险</p>
+                    </div>
+                    <div class="proposal fl proposalAgriculture">
+                        <div></div>
+                        <p>农机险</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list listUpdateImg">
+                <label class="item topTitle">
+                    <span>上传图片</span>
+                </label>
+
+                <div class="updateDiv">
+                    <div class="addImg" id="addImg"></div>
+                    <div class="addF">
+                        <input accept="image/*" type="file" class="addFm" id="upLoad"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list backWhite">
+                <label class="item topTitle">
+                    <span>备注</span>
+                </label>
+
+                <div>
+                    <textarea name="" id="" cols="30" rows="10" class="remarkDiv" placeholder="请填写备注信息"></textarea>
+                </div>
+            </div>
+
+            <div class="btnDiv fl">
+                <a href="" class="btn btn-block" type="button">返回</a>
+            </div>
+            <div class="btnDiv fr">
+                <a href="" class="btn btn-primary btn-block" type="button" on-touch="safeguardPlanCtrl.goNext();">提交</a>
+            </div>
+        </div>
+
+        <div ng-show="myOpportunityCtrl.showOplist">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="请输入方案搜索">
+                </label>
+            </div>
+
+            <div class="list">
+                <div class="item">境外旅游白银版</div>
+                <div class="item">境外旅游白银版</div>
+                <div class="item">境外旅游白银版</div>
+                <div class="item">境外旅游白银版</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

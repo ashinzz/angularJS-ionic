@@ -1,0 +1,102 @@
+<ion-view view-title="任务跟进" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="taskFollowUp1Ctrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="taskFollowUp1Ctrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="taskFollowUp1Ctrl.init()">
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">金融机构信息</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">金融机构代码
+                <span class="item-note">0132</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">金融机构名称
+                <span class="item-note">中国工商银行上海分行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">机构级别
+                <span class="item-note">一级金融机构</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">上级机构
+                <span class="item-note">中国工商银行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">邮政编码
+                <span class="item-note">200000</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">组织机构代码
+                <span class="item-note">11111111-1</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">机构编码
+                <span class="item-note">1111111111</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">联系手机
+                <span class="item-note"><a href="tel:18028739837">18028739837</a></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">联系电话
+                <span class="item-note"><a href="tel:18028739837">18028739837</a></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">地址
+                <span class="item-note">上海,上海市,田林</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">联系人
+                <span class="item-note">王大</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">兼业资格证号
+                <span class="item-note">1111111111111</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">兼业资格有效时间起
+                <span class="item-note">2016-10-17</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">兼业资格有效时间止
+                <span class="item-note">2016-12-10</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">机构关联信息</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">分公司
+                <span class="item-note">上海分公司</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">中支公司
+                <span class="item-note"></span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">支公司
+                <span class="item-note"></span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">代理点信息</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">代理点名称
+                <span class="item-note">中国建设银行股份有限公司上海徐汇分公司</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">代理点代码
+                <span class="item-note">862</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">展业方式
+                <span class="item-note">银行代理(银行代理)</span>
+            </div>
+        </div>
+
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">审核意见</div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">审核意见</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>完成</option>
+                    <option>未完成</option>
+                </select>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">审核备注</div>
+            <ion-item style="border: 0;padding-top: 0;">
+                <textarea class="itemTextArea" rows="3" maxlength="200" placeholder="" style="margin-top: 0;"></textarea>
+            </ion-item>
+        </div>
+
+        <div class="container">
+            <a href="" class="btn btn-block btn-lg" on-touch="" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确定</a>
+        </div>
+    </ion-content>
+</ion-view>

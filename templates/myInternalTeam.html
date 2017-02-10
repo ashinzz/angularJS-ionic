@@ -1,0 +1,54 @@
+<ion-view view-title="我的内部团队">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myInternalTeamCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="myInternalTeamCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myInternalTeamCtrl.init()">
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">团队名
+                <span class="item-note">金融销售一组</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">团队级别
+                <span class="item-note">一级</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">团队星级
+                <span class="item-note">五星</span>
+            </div>
+        </div>
+        <div class="list listNoBorder">
+            <div class="item item2-1">
+                <i class="hongqi"></i>
+                <div class="inlineBlock fl">
+                    <ul class="mb0">
+                        <li class="li-name">王一小(081)</li>
+                        <li class="li-phone">电话：<a href="tel:15839392012">15839392012</a><span class="li-span">专职</span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="item item2-1">
+                <i class="nohongqi"></i>
+                <div class="inlineBlock fl">
+                    <ul class="mb0">
+                        <li class="li-name">李刚刚(052)</li>
+                        <li class="li-phone">电话：<a href="tel:15839392012">15839392012</a><span class="li-span">个人营销员</span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="item item2-1">
+                <i class="nohongqi"></i>
+                <div class="inlineBlock fl">
+                    <ul class="mb0">
+                        <li class="li-name">韩梅梅(033)</li>
+                        <li class="li-phone">电话：<a href="tel:15839392012">15839392012</a><span class="li-span">兼职</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

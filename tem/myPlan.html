@@ -1,0 +1,47 @@
+<ion-view view-title="我的方案">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myPlanCtrl.goBack()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myPlanCtrl.init()">
+        <div class="container" style="background-color: #ffffff;">
+            <div class="fl planChooseDivM" on-touch="myPlanCtrl.chooseSale(myPlanCtrl.planChooseObj[0])"
+                 ng-class="{true:'planChooseBorM',fasle:'planChooseSta'}[myPlanCtrl.planChooseObj[0].choose]">收藏
+            </div>
+            <div class="fl planChooseDivM" on-touch="myPlanCtrl.chooseSale(myPlanCtrl.planChooseObj[1])"
+                 ng-class="{true:'planChooseBorM',fasle:'planChooseSta'}[myPlanCtrl.planChooseObj[1].choose]">无忧
+            </div>
+            <div class="fl planChooseDivM" on-touch="myPlanCtrl.chooseSale(myPlanCtrl.planChooseObj[2])"
+                 ng-class="{true:'planChooseBorM',fasle:'planChooseSta'}[myPlanCtrl.planChooseObj[2].choose]">卫士
+            </div>
+            <div class="fl planChooseDivM" on-touch="myPlanCtrl.chooseSale(myPlanCtrl.planChooseObj[3])"
+                 ng-class="{true:'planChooseBorM',fasle:'planChooseSta'}[myPlanCtrl.planChooseObj[3].choose]">守护
+            </div>
+        </div>
+
+        <div class="container" style="background-color: #ffffff;margin-top: 12px;">
+            <div class="list list-inset" style="margin: 10px 0;">
+                <label class="item item-input" style="height: 35px;">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="search" ng-model="planSaleCtrl.searchword" autocorrect="off" placeholder="请输入方案名称" style="padding: 0;font-weight: 300; text-align: left;">
+                </label>
+            </div>
+
+            <div class="planSaleList container" style="padding-left: 0;" ng-repeat="list in myPlanCtrl.list">
+                <p on-touch="">{{list.name}}</p>
+                <div class="fr listKeep" on-touch="myPlanCtrl.keepp(list)" ng-show="list.keep">
+                    <div></div>
+                    <p>收藏</p>
+                </div>
+                <div class="fr listKeepY" on-touch="myPlanCtrl.keepp(list)" ng-show="!list.keep">
+                    <div></div>
+                    <p>已收藏</p>
+                </div>
+                <div class="fr listShare" on-touch="">
+                    <div></div>
+                    <p>分享</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view view-title="团队成员">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="teamMemberCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="teamMemberCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="teamMemberCtrl.init()">
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <!--<div class="item item-title" style="margin: -1px 16px;padding: 16px 0;"></div>-->
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">姓名
+                <span class="item-note">王一小</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">手机号
+                <span class="item-note">18902983738</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">Email
+                <span class="item-note">189982821@163.com</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">职位
+                <span class="item-note">客户经理</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 13px 0;">部门
+                <span class="item-note">寿险一部</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

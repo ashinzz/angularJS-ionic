@@ -1,0 +1,81 @@
+<ion-view view-title="首页">
+    <ion-nav-buttons side="right">
+        <i class="icon icon homePageRight" on-touch="homePageMCtrl.goSettings()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="homePageMCtrl.init()">
+        <div class="homepage">
+            <!--<div class="fl homeTop homeTop3">-->
+                <!--<div class="homeTask" ng-click="homePageMCtrl.goMyBusinessList()"></div>-->
+                <!--<p>我的商机</p>-->
+            <!--</div>-->
+            <div class="fl homeTop homeTop3">
+                <div class="homePerformance" ng-click="homePageMCtrl.goMyPerformance()"></div>
+                <p>我的绩效</p>
+            </div>
+            <div class="fl homeTop homeTop3">
+                <div class="homeSale" ng-click="homePageMCtrl.goMyPlan()"></div>
+                <p>我的方案</p>
+            </div>
+            <div class="fl homeTop homeTop3">
+                <div class="homeManage" ng-click="homePageMCtrl.goMyteam()"></div>
+                <p>我的团队</p>
+            </div>
+        </div>
+
+        <div class="homepageTwo">
+            <h4 style="font-size: 17px;">我的绩效</h4>
+
+            <div>
+                <div class="homeMyPerformance fl" ng-click="homePageMCtrl.goMyPerformance()">
+                    <p>年度保费</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="premium"></div>
+                </div>
+                <div class="homeMyPerformance fl" ng-click="homePageMCtrl.goMyPerformance()">
+                    <p>达成率</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="accomplish"></div>
+                </div>
+                <div class="homeMyPerformance fl noBorder" ng-click="homePageMCtrl.goInfo()">
+                    <p>公司排名</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="cast"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="homepageThree">
+            <h4 style="font-size: 17px;">我的商机</h4>
+            <!--<div class="homeMyTask" ng-click="homePageMCtrl.goUnfinishedBusiness()">-->
+                <!--<span class="composite fl"></span>-->
+                <!--&lt;!&ndash;<i class="taskNum fr"></i>&ndash;&gt;-->
+                <!--<i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">3</i>-->
+                <!--<p>未完成商机</p>-->
+            <!--</div>-->
+            <!--<div class="homeMyTask" ng-click="homePageMCtrl.goFinishedBusiness()">-->
+                <!--<span class="commerce fl"></span>-->
+                <!--&lt;!&ndash;<i class="glyphicon badge" style="float: right;margin: 5px;height: 20px;font-size: 14px;background-color: #FE4E13;line-height: 12px;">3</i>&ndash;&gt;-->
+                <!--<p>已完成商机</p>-->
+            <!--</div>-->
+
+            <div>
+                <div class="homeBuss fl" ng-click="homePageMCtrl.goUnfinishedBusiness()">
+                    <p>未完成商机</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="homeUnBusiness"></div>
+                </div>
+                <div class="homeBuss fl noBorder" ng-click="homePageMCtrl.goFinishedBusiness()">
+                    <p>已完成商机</p>
+                    <h6>暂无数据</h6>
+
+                    <div class="homeBusiness"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

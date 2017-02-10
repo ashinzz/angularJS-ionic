@@ -1,0 +1,80 @@
+<ion-view view-title="任务详情" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="taskDetailCtrl.goBack()"></i>
+    </ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<i class="icon rightHomeIcon" on-touch="taskDetailCtrl.goHomePage()"></i>
+	</ion-nav-buttons>
+
+    <ion-content class="taskDetailContent" ng-init="taskDetailCtrl.init()">
+		<ion-list class="actEdit-list list-level2">
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">任务类型</span>
+	            	<div class="text-div blueTxt">拜访</div>
+	            </ion-item>
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">任务标题</span>
+	            	<div class="text-div">拜访交通银行客户经理</div>
+	            </ion-item>
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">客户名称</span>
+	            	<div class="text-div">王二小</div>
+	            </ion-item>
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">客户电话</span>
+	            	<div class="text-div">17721151993</div>
+	            </ion-item>
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">拜访地点</span>
+	            	<div class="text-div">上海徐汇区田林路200号</div>
+	            </ion-item>
+	            <ion-item class="item-input">
+	            	<span class="input-label itemTitle">完成时间</span>
+	            	<div class="text-div">2016-01-05 00:00</div>
+	            </ion-item>
+	            <!-- <ion-item class="item-input">
+	            	<span class="input-label itemTitle">接收人</span>
+	            	<div class="text-div"></div>
+	            </ion-item> -->
+	            <!-- <ion-item class="item-input item">
+	           		<span class="input-label itemTitle">接收人</span>
+	                <div class="col allLastTime disable-user-behavior" on-touch="vm.changeChannel()">
+	    					<span class="blueTxt" >王二</span>
+	    					<span class="allArrowDwnOrange"></span>
+	    			</div>
+            	</ion-item>  -->
+            	<!--<ion-item class="item-input item-select ionDropNew">-->
+	           		<!--<span class="input-label itemTitle">接收人</span>-->
+	                <!--<div class="col allLastTime disable-user-behavior">-->
+	    				<!--<select style="color: #aaaaaa;">-->
+	                        <!--<option selected="" value="请选择">请选择</option>-->
+	                        <!--<option value="">张晓</option>-->
+	                        <!--<option value="">吴晓明</option>-->
+	                        <!--<option value="">李四</option>-->
+                   		<!--</select>-->
+	    			<!--</div>-->
+            	<!--</ion-item>-->
+				<ion-item class="item-input  plr10" on-touch="taskDetailCtrl.goRecipient()" style="padding-left: 0;padding-right: 0;">
+					<span class="input-label itemTitle">接收人</span>
+					<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+				</ion-item>
+            	<ion-item class="item" style="border-bottom: 0;">
+					<div class="">
+						<span class="itemTitle">拜访内容</span>
+						<textarea class="itemTextArea" rows="3" maxlength="200" placeholder=""></textarea>
+					</div>
+				</ion-item>
+	            
+	    </ion-list>
+
+		<div style="margin-top: 10px;"></div>
+		<ion-item class="item-input mt15 plr10" on-touch="taskDetailCtrl.taskFollowUp()" ng-show="isShowTaskFollowUp">
+	            	<span class="input-label itemTitle">任务跟进</span>
+	            	<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+	            </ion-item>
+	            <ion-item class="item-input  plr10" on-touch="taskDetailCtrl.taskTrajectory()">
+	            	<span class="input-label itemTitle">任务轨迹</span>
+	            	<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+	            </ion-item>
+	</ion-content>
+</ion-view>

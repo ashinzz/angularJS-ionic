@@ -1,0 +1,50 @@
+<ion-view view-title="险种">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="insuranceTypeCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="insuranceTypeCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="insuranceTypeCtrl.init()">
+        <!--搜索框-->
+        <div style="margin: 0;padding: 15px 16px;" class="list list-inset">
+            <div class="item item-input col-xs-10" style="height: 29px;padding: 0;padding-left: 1rem;width: 85%;">
+                <input type="text" placeholder="请输入险种名称">
+            </div>
+            <div class="col-xs-2 searchBtn" on-touch="insuranceTypeCtrl.showSearchDetail()"></div>
+            <!--<div class="col-xs-1 searchCondition fr" style="margin-right: 0px;"-->
+            <!--on-touch="insuranceTypeCtrl.showSearchResult()"></div>-->
+        </div>
+
+        <div class="insuranceTypeTopTitle">
+            <div class="fl insuranceTypeLeftDiv">选择</div>
+            <div class="fl insuranceTypeCenterDiv">险种名称</div>
+            <div class="fl insuranceTypeRightDiv">任务数量</div>
+        </div>
+
+        <div style="background-color: #ffffff;">
+            <div class="insuranceTypeDiv" ng-repeat="t in insuranceTypeCtrl.insuranceType">
+                <div class="fl insuranceTypeLeftDiv">
+                    <span class="option_left orderEvent" on-touch="insuranceTypeCtrl.chooseType(t)" style="margin-right: 20px;">
+                        <span class="radiocheck" ng-show="!t.choose"></span>
+                        <span class="radiochecked" ng-show="t.choose"></span>
+                    </span>
+                </div>
+                <div class="fl insuranceTypeCenterDiv">{{t.name}}</div>
+                <div class="fl insuranceTypeRightDiv">
+                    <input type="number">
+                </div>
+            </div>
+
+            <div class="insuranceTypeBottomDiv">
+                <img src="img/bottomArr.png" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch=""
+               style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

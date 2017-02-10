@@ -1,0 +1,25 @@
+<ion-view view-title="接收人" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="recipientCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="recipientCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="recipientCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-icon-right" style="margin: -1px 16px;padding: 5px 0 5px 0;" ng-repeat="r in recipientCtrl.recipient">
+                <span class="option_left orderEvent fl" on-touch="recipientCtrl.chooseReceivePerson(r)"
+                      style="margin-right: 20px;margin-top: 10px;">
+							<span class="radiocheck" ng-show="!r.choose"></span>
+                            <span class="radiochecked" ng-show="r.choose"></span>
+						</span>
+                <span class="input-label">{{r.name}}</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="" class="btn btn-block btn-lg" on-touch="recipientCtrl.goBack()" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确定</a>
+        </div>
+    </ion-content>
+</ion-view>

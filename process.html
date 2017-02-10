@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .loadingDiv {
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .loadingDiv p {
+            font-size: xx-large;
+        }
+
+        .loadingDiv img{
+            width: 40%;
+            margin-top: 40%;
+            animation:loading 2s linear infinite;
+            -ms-animation:loading 2s linear infinite;
+            -webkit-animation:loading 2s linear infinite;
+            -o-animation:loading 2s linear infinite;
+            -moz-animation:loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {transform:rotate(0deg);}
+            50% {transform:rotate(180deg);}
+            100% {transform:rotate(360deg);}
+        }
+        @-ms-keyframes loading {
+            0% {-ms-transform:rotate(0deg);}
+            50% {-ms-transform:rotate(180deg);}
+            100% {-ms-transform:rotate(360deg);}
+        }
+        @-webkit-keyframes loading {
+            0% {-webkit-transform:rotate(0deg);}
+            50% {-webkit-transform:rotate(180deg);}
+            100% {-webkit-transform:rotate(360deg);}
+        }
+        @-o-keyframes loading {
+            0% {-o-transform:rotate(0deg);}
+            50% {-o-transform:rotate(180deg);}
+            100% {-o-transform:rotate(360deg);}
+        }
+        @-moz-keyframes loading {
+            0% {-moz-transform:rotate(0deg);}
+            50% {-moz-transform:rotate(180deg);}
+            100% {-moz-transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="loadingDiv">
+    <img src="img/loading999.png" alt="" id="loadingImg">
+    <p>50%</p>
+</div>
+</body>
+<script>
+
+</script>
+</html>

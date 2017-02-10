@@ -1,0 +1,158 @@
+<ion-view view-title="我的商机">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myBusinessCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="myBusinessCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="myBusinessCtrl.init()">
+        <div class="list listNoBorder" style="margin-bottom: 20px;">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">客户信息</div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">客户类型
+                <span class="item-note">团队</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">客户名称
+                <span class="item-note">中国银行上海分行</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">联系人
+                <span class="item-note">王丽丽</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">电话
+                <span class="item-note">18928371278</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">邮箱
+                <span class="item-note">18920393448@163.com</span>
+            </div>
+            <div class="item" style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding: 16px 0;">地址
+                <span class="item-note">上海市徐汇区田林路</span>
+            </div>
+        </div>
+        <!--<div class="list listBusiness">-->
+            <!--<label class="item topTitle">-->
+                <!--<span>客户信息</span>-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">客户类型</span>-->
+                <!--<input type="text" placeholder="团队" class="text-right" disabled>-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">客户名称</span>-->
+                <!--<input type="text" placeholder="中国银行上海分行" class="text-right" disabled>-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">联系人</span>-->
+                <!--<input type="text" placeholder="王丽丽" class="text-right" disabled>-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">电话</span>-->
+                <!--<input type="tel" placeholder="18023982737" class="text-right">-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">邮箱</span>-->
+                <!--<input type="email" placeholder="18920393448@163.com" class="text-right">-->
+            <!--</label>-->
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">地址</span>-->
+                <!--<input type="text" placeholder="上海市徐汇区田林路" class="text-right" disabled>-->
+            <!--</label>-->
+        <!--</div>-->
+
+        <div class="list planBusiness">
+            <label class="item topTitle">
+                <span>方案</span>
+            </label>
+
+            <div class="insuranceDemand fl" ng-repeat="t in myBusinessCtrl.choosePlanTeam">
+                <span class="option_left orderEvent" on-touch=""
+                      style="margin-right: 20px;">
+				    <span class="radiocheck" ng-show="!t.choose"></span>
+                    <span class="radiochecked" ng-show="t.choose"></span>{{t.name}}
+				</span>
+            </div>
+
+            <!--<div class="fl classificationScheme">-->
+                <!--<div class="proposal fl proposalCar" ng-show="!myBusinessCtrl.planUnChoosed" on-touch="">-->
+                    <!--<div></div>-->
+                    <!--<p>无忧</p>-->
+                <!--</div>-->
+                <!--<div class="proposal fl proposalDuty" ng-show="myBusinessCtrl.planUnChoosed">-->
+                    <!--<div></div>-->
+                    <!--<p>无忧</p>-->
+                <!--</div>-->
+
+                <!--<div class="proposal fl proposalUnexpected" ng-show="myBusinessCtrl.planUnChoosed">-->
+                    <!--<div></div>-->
+                    <!--<p>卫士</p>-->
+                <!--</div>-->
+                <!--<div class="proposal fl proposalCredit" ng-show="!myBusinessCtrl.planUnChoosed">-->
+                    <!--<div></div>-->
+                    <!--<p>卫士</p>-->
+                <!--</div>-->
+
+                <!--<div class="proposal fl proposalFreight" ng-show="myBusinessCtrl.planUnChoosed">-->
+                    <!--<div></div>-->
+                    <!--<p>守护</p>-->
+                <!--</div>-->
+                <!--<div class="proposal fl proposalDistribution" ng-show="!myBusinessCtrl.planUnChoosed">-->
+                    <!--<div></div>-->
+                    <!--<p>守护</p>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash;<div class="proposal fl proposalPenates" ng-show="myBusinessCtrl.planUnChoosed">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>责任险</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="proposal fl proposalAgriculture" ng-show="!myBusinessCtrl.planUnChoosed">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>责任险</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+
+        <!--<div class="list listUpdateImg">-->
+        <!--<label class="item topTitle">-->
+        <!--<span>上传图片</span>-->
+        <!--</label>-->
+
+        <!--<div class="updateDiv">-->
+        <!--<div class="addImg" id="addImg"></div>-->
+        <!--<div class="addF">-->
+        <!--<input accept="image/*" type="file" class="addFm" id="upLoad"/>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="list backWhite">
+            <label class="item topTitle" style="padding-bottom: 0;">
+                <span>备注</span>
+            </label>
+
+            <div class="item" style="border: 0;">
+                <!--<textarea name="" id="" cols="30" rows="10" class="remarkDiv" placeholder="请和相关人员联系" disabled></textarea>-->
+                <textarea class="itemTextArea" rows="3" maxlength="200" placeholder="" style="margin-top: 0;"></textarea>
+            </div>
+        </div>
+
+        <!--<ion-item class="item-input mt15 plr10" style="border: 0;border-bottom: 2px solid #F5F5F5;" ng-click="myBusinessCtrl.goImageUpload()" ng-show="!finishedB">-->
+            <!--<span class="input-label itemTitle">图片上传</span>-->
+            <!--<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>-->
+        <!--</ion-item>-->
+        <ion-item class="item-input mt15 plr10" style="border: 0;border-bottom: 2px solid #F5F5F5;" ng-click="myBusinessCtrl.goImageUpload()">
+            <span class="input-label itemTitle">图片预览</span>
+            <i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+        </ion-item>
+        <ion-item class="item-input  plr10" style="border: 0;" ng-click="myBusinessCtrl.goMissionFollow()">
+            <span class="input-label itemTitle">任务轨迹</span>
+            <i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+        </ion-item>
+        <!--<ion-item class="item-input  plr10" style="border: 0;" on-touch="myBusinessCtrl.goMissionFollow()">-->
+            <!--<span class="input-label itemTitle">任务跟进</span>-->
+            <!--<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>-->
+        <!--</ion-item>-->
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch="" style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,86 @@
+<ion-view view-title="新建">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="customerManagerAddCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+    <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="customerManagerAddCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-title">客户经理</div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">一级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">二级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">三级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">四级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">五级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+            <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">六级分行名称</span>
+                <select style="color: #aaaaaa;padding-right: 30px;">
+                    <option selected>请选择</option>
+                    <option>组织机构代码</option>
+                    <option>营业执照</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">登录账号信息</div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">工号</span>
+                <input type="text" placeholder="请输入工号" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">姓名</span>
+                <input type="text" placeholder="请输入姓名" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">手机号码</span>
+                <input type="text" placeholder="请输入手机号码" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">E-mail</span>
+                <input type="text" placeholder="E-mail" class="inputTextRight" style="padding-right: 20px;">
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar style="padding: 0;height: 50px;background-color: #f6f6f6;">
+        <a href="" class="btn btn-danger btn-block btn-lg" on-touch="customerManagerAddCtrl.goBack()" style="margin: 0 15px;background-color: #e83344;color: #FFFFFF;">确认</a>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="我的任务" hide-back-button="false">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myTaskListCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+    <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="myTaskListCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-icon-left" on-touch="myTaskListCtrl.goMyTask()"
+                 style="margin: -1px 16px;padding-left: 38px;padding-right: -1px;">
+                <i class="icon taskListIcon1" style="height: 27px;left: 0;"></i>
+                我的任务
+            </div>
+            <div class="item item-icon-left" on-touch="myTaskListCtrl.goTaskSearch()"
+                 style="border-top: 1px solid #f5f5f5;margin: -1px 16px;padding-left: 38px;padding-right: -1px;">
+                <i class="icon taskListIcon2" style="height: 27px;left: 0;"></i>
+                任务查询
+            </div>
+        </div>
+        <div class="list listNoBorder">
+            <div class="item item-icon-left" on-touch="myTaskListCtrl.goLogBook()"
+                 style="margin: -1px 16px;padding-left: 38px;padding-right: -1px;">
+                <i class="icon taskListIcon3" style="height: 27px;left: 0;"></i>
+                工作日志
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,249 @@
+<ion-view view-title="新建商机">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="newBusinessCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="newBusinessCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="newBusinessCtrl.init()">
+        <div class="list listNoBorder">
+            <div class="item item-title" style="margin: -1px 16px;padding: 16px 0;">客户信息</div>
+            <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                <span class="input-label">客户类型</span>
+                <!--<select style="color: #aaaaaa;padding-right: 30px;">-->
+                <!--<option selected>请选择</option>-->
+                <!--<option>AAA</option>-->
+                <!--<option>BBB</option>-->
+                <!--</select>-->
+                <div class="text-div" style="padding-right: 0;">
+                    <div class="">
+						<span class="option_left orderEvent" on-touch="newBusinessCtrl.chooseTypeT()"
+                              style="margin-right: 20px;">
+							<span class="radiocheck" ng-show="!newBusinessCtrl.teamN"></span>
+                            <span class="radiochecked" ng-show="newBusinessCtrl.teamN"></span>企业
+						</span>
+                        <span class="orderEvent" on-touch="newBusinessCtrl.chooseTypeP()">
+							<span class="radiocheck" ng-show="!newBusinessCtrl.personN"></span>
+                            <span class="radiochecked" ng-show="newBusinessCtrl.personN"></span>个人
+						</span>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="newBusinessCtrl.teamN">
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">企业名称</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+                <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">行业类型</span>
+                    <!--<input type="text" placeholder="请输入" class="inputTextRight">-->
+                    <select style="color: #aaaaaa;padding-right: 11px;">
+                        <option selected>请选择</option>
+                        <option value="">农、林、牧、渔业</option>
+                        <option value="">采矿业</option>
+                        <option value="">制造业</option>
+                        <option value="">电力、燃气及水的生产和供应</option>
+                        <option value="">建筑业</option>
+                        <option value="">交通运输、仓储和邮政</option>
+                        <option value="">信息传输、计算机服务和软件业</option>
+                        <option value="">批发和零售</option>
+                        <option value="">住宿和餐饮业</option>
+                        <option value="">金融业</option>
+                        <option value="">房地产业</option>
+                        <option value="">租赁和商务服务</option>
+                        <option value="">科学研究、技术服务和地质勘查</option>
+                        <option value="">水利、环境和公共设施管理</option>
+                        <option value="">居民服务和其他服务</option>
+                        <option value="">教育</option>
+                        <option value="">卫生、社会保障和社会福利</option>
+                        <option value="">文化、体育和娱乐业</option>
+                        <option value="">公共管理和社会组织</option>
+                        <option value="">国际组织</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select ionDropNew" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">行业类型</span>
+                    <!--<input type="text" placeholder="请输入" class="inputTextRight">-->
+                    <select style="color: #aaaaaa;padding-right: 11px;" ng-options="s.name for s in newBusinessCtrl.sel" ng-model="newBusinessCtrl.select">
+                    </select>
+                </div>
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">联系部门</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">联系人</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">联系电话</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+            </div>
+
+            <div ng-show="newBusinessCtrl.personN">
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">客户姓名</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">客户性别</span>
+                    <div class="text-div" style="padding-right: 0;">
+                        <div class="">
+						<span class="option_left orderEvent" on-touch="newBusinessCtrl.chooseSexM()"
+                              style="margin-right: 20px;">
+							<span class="radiocheck" ng-show="!newBusinessCtrl.sexM"></span>
+                            <span class="radiochecked" ng-show="newBusinessCtrl.sexM"></span>男
+						</span>
+                            <span class="orderEvent" on-touch="newBusinessCtrl.chooseSexW()">
+							<span class="radiocheck" ng-show="newBusinessCtrl.sexM"></span>
+                            <span class="radiochecked" ng-show="!newBusinessCtrl.sexM"></span>女
+						</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-input" style="margin: -1px 16px;padding-left: 0;">
+                    <span class="input-label">手机号码</span>
+                    <input type="text" placeholder="请输入" class="inputTextRight">
+                </div>
+            </div>
+        </div>
+        <!--<div class="list listBusiness">-->
+        <!--<label class="item topTitle">-->
+        <!--<span>客户信息</span>-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">客户类型</span>-->
+        <!--<input type="text" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">客户名称</span>-->
+        <!--<input type="text" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">联系人</span>-->
+        <!--<input type="text" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">电话</span>-->
+        <!--<input type="tel" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">邮箱</span>-->
+        <!--<input type="email" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--<label class="item item-input">-->
+        <!--<span class="input-label">地址</span>-->
+        <!--<input type="text" placeholder="请输入" class="text-right">-->
+        <!--</label>-->
+        <!--</div>-->
+
+        <div class="list planBusiness">
+            <label class="item topTitle">
+                <span>方案</span>
+            </label>
+
+            <div class="insuranceDemand fl" ng-repeat="t in newBusinessCtrl.choosePlanTeam" ng-show="newBusinessCtrl.teamN">
+                <span class="option_left orderEvent" on-touch="newBusinessCtrl.chooseT(t)"
+                      style="margin-right: 20px;">
+				    <span class="radiocheck" ng-show="!t.choose"></span>
+                    <span class="radiochecked" ng-show="t.choose"></span>{{t.name}}
+				</span>
+            </div>
+
+            <div class="insuranceDemand insuranceDemandP fl" ng-repeat="p in newBusinessCtrl.choosePlanPerson" ng-show="newBusinessCtrl.personN">
+                <span class="option_left orderEvent" on-touch="newBusinessCtrl.chooseP(p)"
+                      style="margin-right: 20px;">
+				    <span class="radiocheck" ng-show="!p.choose"></span>
+                    <span class="radiochecked" ng-show="p.choose"></span>{{p.name}}
+				</span>
+            </div>
+
+            <!--<div class="fl classificationScheme">-->
+            <!--<div class="proposal fl proposalCar" ng-show="!newBusinessCtrl.choosePlan[0].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[0])">-->
+            <!--<div></div>-->
+            <!--<p>无忧</p>-->
+            <!--</div>-->
+            <!--<div class="proposal fl proposalDuty" ng-show="newBusinessCtrl.choosePlan[0].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[0])">-->
+            <!--<div></div>-->
+            <!--<p>无忧</p>-->
+            <!--</div>-->
+
+            <!--<div class="proposal fl proposalUnexpected" ng-show="!newBusinessCtrl.choosePlan[1].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[1])">-->
+            <!--<div></div>-->
+            <!--<p>卫士</p>-->
+            <!--</div>-->
+            <!--<div class="proposal fl proposalCredit" ng-show="newBusinessCtrl.choosePlan[1].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[1])">-->
+            <!--<div></div>-->
+            <!--<p>卫士</p>-->
+            <!--</div>-->
+
+            <!--<div class="proposal fl proposalFreight" ng-show="!newBusinessCtrl.choosePlan[2].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[2])">-->
+            <!--<div></div>-->
+            <!--<p>守护</p>-->
+            <!--</div>-->
+            <!--<div class="proposal fl proposalDistribution" ng-show="newBusinessCtrl.choosePlan[2].choose"-->
+            <!--on-touch="newBusinessCtrl.choose(newBusinessCtrl.choosePlan[2])">-->
+            <!--<div></div>-->
+            <!--<p>守护</p>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;<div class="proposal fl proposalPenates" ng-show="newBusinessCtrl.planUnChoosed">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<p>责任险</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="proposal fl proposalAgriculture" ng-show="!newBusinessCtrl.planUnChoosed">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<p>责任险</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+
+        <!--<div class="list listUpdateImg">-->
+        <!--<label class="item topTitle">-->
+        <!--<span>上传图片</span>-->
+        <!--</label>-->
+
+        <!--<div class="updateDiv">-->
+        <!--<div class="addImg" id="addImg"></div>-->
+        <!--<div class="addF">-->
+        <!--<input accept="image/*" type="file" class="addFm" id="upLoad"/>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="list backWhite">
+            <label class="item topTitle" style="padding-bottom: 0;">
+                <span>备注</span>
+            </label>
+
+            <div class="item" style="border: 0;">
+                <!--<textarea name="" id="" cols="30" rows="10" class="remarkDiv" placeholder="请填写备注信息"></textarea>-->
+                <textarea class="itemTextArea" rows="3" maxlength="200" placeholder=""
+                          style="margin-top: 0;"></textarea>
+            </div>
+        </div>
+
+        <ion-item class="item-input mt15 plr10" style="border: 0;border-bottom: 1px solid #F5F5F5;"
+                  on-touch="newBusinessCtrl.goImageUpload()">
+            <span class="input-label itemTitle">图片上传</span>
+            <i class="icon ion-ios-arrow-right insuranceArrowRight"></i>
+        </ion-item>
+        <!--<ion-item class="item-input  plr10" style="border: 0;" on-touch="">-->
+        <!--<span class="input-label itemTitle">任务轨迹</span>-->
+        <!--<i class="icon ion-ios-arrow-right insuranceArrowRight"></i>-->
+        <!--</ion-item>-->
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch=""
+               style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

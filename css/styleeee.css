@@ -1,0 +1,502 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*顶部按钮*/
+.goBacks_home {
+    margin-left: 5px;
+    width: 30px;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.homePageRight {
+    margin-right: 5px;
+    width: 21px;
+    height: 21px;
+    font-size: 25px;
+    margin-top: 10px;
+    background: url("../img/allnew4.png") no-repeat -227px -27px;
+    background-size: 250px 73.5px;
+}
+
+.rightHomeIcon {
+    width: 22px;
+    height: 21px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    background: url("../img/allnew5.png") no-repeat -79px -1px;
+    background-size: 313.5px 369px;
+}
+
+/*登录*/
+.scroll {
+    height: 100%;
+}
+
+.logBack {
+    background: url("../img/beijing.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.logCon {
+    width: 80%;
+    margin: auto;
+    padding-top: 30%;
+}
+
+.logDiv {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logDiv label {
+    height: 6vh;
+    margin: 0 0 10px 0;
+    line-height: 5vh;
+}
+
+.logDiv label > span {
+    font-size: 14px;
+    font-weight: 300;
+    /*text-align: right;*/
+    color: #666666;
+}
+
+.logDiv label > input {
+    /*text-align: right;*/
+    /*padding-right: 15px;*/
+    color: #666;
+    font-weight: 300;
+}
+
+.list {
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+}
+
+.radiocheck {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../img/radio.png") no-repeat;
+    background-size: 15px 15px;
+}
+
+.radiochecked {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../img/radiocheck.png") no-repeat;
+    background-size: 15px 15px;
+}
+
+.logForget {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.getIcon {
+    float: right;
+    margin-right: 5px;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: url("../img/allnew5.png") no-repeat -78px -297px;
+    background-size: 313.5px 369px;
+    margin-bottom: 15px;
+    margin-left: -45px;
+}
+
+.getIconY {
+    float: right;
+    margin-right: 5px;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: url("../img/allnew4.png") no-repeat -207px -51px;
+    background-size: 250px 73.5px;
+    margin-bottom: 15px;
+    margin-left: -45px;
+}
+
+.ionDrop:after {
+    position: absolute;
+    top: 35%;
+    right: 16px;
+    margin-top: 0px;
+    width: 15px;
+    height: 16px;
+    background: url(../img/all.png) no-repeat 0 -3px;
+    /*background-size: 50%;*/
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    /*color: #999;*/
+    content: "";
+    pointer-events: none;
+}
+
+
+
+/*首页*/
+.homepage {
+    background-color: #ffffff;
+    height: 120px;
+}
+
+.homeTop {
+    width: 33%;
+    text-align: center;
+}
+
+.homeTop > div {
+    width: 56px;
+    height: 57px;
+    margin: 15px auto;
+    margin-bottom: 5px;
+    /*background-size: 627px 738px;*/
+    background-size: 313.5px 369px;
+}
+
+.homeTask {
+    background: url("../img/allnew1.png") no-repeat -1px -39px;
+}
+
+.homePerformance {
+    background: url("../img/allnew1.png") no-repeat -57px -39px;
+}
+
+.homeSale {
+    background: url("../img/allnew1.png") no-repeat -114px -39px;
+}
+
+.homeManage {
+    background: url("../img/allnew1.png") no-repeat -170px -39px;
+}
+
+.homepageTwo {
+    margin-top: 1rem;
+    height: 200px;
+    background-color: #ffffff;
+}
+
+.homepageTwo > h4 {
+    margin-left: 1rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    /*font-weight: 600;*/
+}
+
+.homeMyPerformance {
+    width: 33%;
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+}
+
+.homeMyPerformance > div {
+    margin: 1rem auto;
+}
+
+.homeMyPerformance > h6 {
+    color: #FE4E15;
+    font-weight: 600;
+}
+
+.premium {
+    width: 62px;
+    height: 52px;
+    background: url("../img/allnew1.png") no-repeat -1px -101px;
+    background-size: 313.5px 369px;
+}
+
+.accomplish {
+    width: 51px;
+    height: 51px;
+    background: url("../img/allnew1.png") no-repeat -64px -102px;
+    background-size: 313.5px 369px;
+}
+
+.cast {
+    width: 52px;
+    height: 52px;
+    background: url("../img/allnew1.png") no-repeat -116px -101px;
+    background-size: 313.5px 369px;
+}
+
+.noBorder {
+    border: none;
+}
+
+.homepageThree {
+    height: 255px;
+    background-color: #ffffff;
+    margin-top: 1rem;
+}
+
+.homepageThree > h4 {
+    margin-left: 1rem;
+    padding-top: 2rem;
+    /*margin-bottom: 2rem;*/
+    /*font-weight: 600;*/
+}
+
+.homeMyTask {
+    width: 100%;
+    height: 40px;
+    line-height: 30px;
+    border-bottom: 1px solid #f5f5f5;
+    margin-top: 10px;
+}
+
+.homeMyTask > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+    background-size: 313.5px 369px;
+}
+
+.homeMyTask > p {
+    font-size: inherit;
+    /*font-weight: 600;*/
+}
+
+.composite {
+    background: url("../img/allnew2.png") no-repeat -175px -113px;
+}
+
+.commerce {
+    background: url("../img/allnew2.png") no-repeat -205px -112px;
+}
+
+.replenish {
+    background: url("../img/allnew2.png") no-repeat -235px -112px;
+}
+
+.remindTask {
+    background: url("../img/9.8-add.png") no-repeat 0px 0px;
+}
+
+.taskNum {
+    width: 18px;
+    height: 18px;
+    background: url("../img/allnew1.png") no-repeat -277px -6px;
+    margin: 10px;
+    background-size: 313.5px 369px;
+}
+
+.taskNum1 {
+    width: 18px;
+    height: 18px;
+    background: url("../img/allnew1.png") no-repeat -295px -6px;
+    margin: 10px;
+    background-size: 313.5px 369px;
+}
+
+.listNoBorder {
+    background-color: #ffffff;
+}
+
+.listNoBorder .item {
+    border: 0;
+    border-top: 1px solid #f5f5f5;
+}
+
+/*我的内部团队*/
+.item.item2-1 {
+    border-top: 1px solid #f5f5f5;
+    margin: -1px 16px;
+    padding: 16px 0;
+}
+
+.li-phone {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.mb0 {
+    margin-bottom: 0px;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.hongqi {
+    background: url("../img/9.8-add.png");
+    width: 18px;
+    height: 21px;
+    display: inline-block;
+    background-position: -39px -7px;
+    background-size: 57px 35px;
+    float: left;
+}
+
+.nohongqi {
+    width: 18px;
+    height: 21px;
+    float: left;
+    display: inline-block;
+}
+
+.li-span {
+    margin-left: 20px;
+}
+
+.item-icon-right .icon {
+    right: 0px;
+}
+
+/*我的商机*/
+.topTitle {
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.topTitle span {
+    font-size: 110%;
+}
+
+.addF {
+    width: 71px;
+    height: 71px;
+    background: url("../img/all.png") no-repeat -2px -313px;
+    float: left;
+    margin-left: 2rem;
+}
+
+.addFm {
+    width: 73px;
+    height: 73px;
+    opacity: 0;
+}
+
+.addImg > div {
+    float: left;
+    margin-left: 2rem;
+}
+
+.listUpdateImg {
+    height: 15rem;
+}
+
+.updateDiv {
+    margin-top: 2rem;
+}
+
+.remarkDiv {
+    width: 90%;
+    height: 5rem;
+    margin: 1rem auto;
+    border: 1px solid #dddddd;
+    background-color: #FAFAFA;
+    resize: none;
+    padding: 1rem;
+}
+
+.backWhite {
+    background-color: #ffffff;
+}
+
+.btnDiv {
+    width: 40%;
+    border: 1px solid #005796;
+    border-radius: .5rem;
+    margin: 5%;
+}
+
+.proposal {
+    width: 25%;
+}
+
+.proposal div {
+    width: 68px;
+    height: 68px;
+    margin: 1rem auto;
+}
+
+.proposal p {
+    text-align: center;
+}
+
+.proposalCar div {
+    background: url("../img/all.png") no-repeat -4px -162px;
+}
+
+.proposalUnexpected div {
+    background: url("../img/all.png") no-repeat -77px -162px;
+}
+
+.proposalFreight div {
+    background: url("../img/all.png") no-repeat -149px -162px;
+}
+
+.proposalPenates div {
+    background: url("../img/all.png") no-repeat -228px -162px;
+}
+
+.proposalDuty div {
+    width: 68px;
+    background: url("../img/all.png") no-repeat -5px -234px;
+}
+
+.proposalCredit div {
+    background: url("../img/all.png") no-repeat -77px -234px;
+}
+
+.proposalDistribution div {
+    background: url("../img/all.png") no-repeat -151px -234px;
+}
+
+.proposalAgriculture div {
+    background: url("../img/all.png") no-repeat -229px -234px;
+}
+
+.proposalCar p {
+    color: #5F8BEC;
+}
+
+.proposalUnexpected p {
+    color: #AB93EB;
+}
+
+.proposalFreight p {
+    color: #B5E436;
+}
+
+.proposalPenates p {
+    color: #FF7B79;
+}
+
+.proposalDuty p {
+    color: #47BE9E;
+}
+
+.proposalCredit p {
+    color: #81B5DC;
+}
+
+.proposalDistribution p {
+    color: #FF9F2E;
+}
+
+.proposalAgriculture p {
+    color: #39D16D;
+}

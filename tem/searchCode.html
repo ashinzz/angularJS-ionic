@@ -1,0 +1,21 @@
+<ion-view view-title="代理点">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="searchCodeCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="icon rightHomeIcon" on-touch="searchCodeCtrl.goHomePage()"></i>
+    </ion-nav-buttons>
+
+    <ion-content ng-init="searchCodeCtrl.init()">
+        <ion-item class="item-input item disable-user-behavior" on-touch="searchCodeCtrl.dealershipSearch()">
+            <span class="input-label itemTitle">代理点</span>
+            <div class="text-div ng-binding" >{{dataList.dealership}}</div>
+            <i class="glyphicon glyphicon-search searchEdit"></i>
+        </ion-item>
+
+        <div class="container">
+            <a href="" class="btn btn-danger btn-block btn-lg" on-touch=""
+               style="margin: 5rem auto;background-color: #e83344;color: #FFFFFF;">确认</a>
+        </div>
+    </ion-content>
+</ion-view>

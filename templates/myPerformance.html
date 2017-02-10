@@ -1,0 +1,105 @@
+<ion-view view-title="我的绩效">
+    <ion-nav-buttons side="left">
+        <i class="icon icon ion-ios-arrow-left goBacks_home" on-touch="myPerformanceCtrl.goBack()"></i>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="icon icon rightHomeIcon" on-touch=""></i>-->
+    <!--</ion-nav-buttons>-->
+
+    <ion-content ng-init="myPerformanceCtrl.init()">
+        <div class="performanceDiv">
+            <div class="fl performance" on-touch="myPerformanceCtrl.people()"
+                 ng-class="{true:'bottomBorder',fasle:'nBottomBorder'}[myPerformanceCtrl.teamPeople]">
+                <p>个人绩效</p>
+            </div>
+            <div class="fl performance" on-touch="myPerformanceCtrl.team()"
+                 ng-class="{true:'bottomBorder',fasle:'nBottomBorder'}[!myPerformanceCtrl.teamPeople]">
+                <p>团队绩效</p>
+            </div>
+        </div>
+
+        <!--<div>-->
+        <!--<div class="fl performanceRate">-->
+        <!--<div class="fl performanceIcon performanceIconNew"></div>-->
+        <!--<div class="fl performanceRateP">-->
+        <!--<p>新增客户数</p>-->
+        <!--<p>090</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="fl performanceRate">-->
+        <!--<div class="fl performanceIcon performanceIconCon"></div>-->
+        <!--<div class="fl performanceRateP">-->
+        <!--<p>续保率</p>-->
+        <!--<p>068</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="fl performanceRate">-->
+        <!--<div class="fl performanceIcon performanceIconAdd"></div>-->
+        <!--<div class="fl performanceRateP">-->
+        <!--<p>加保率</p>-->
+        <!--<p>011</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="container" style="margin-top: 12px;background-color: #ffffff;">
+            <div class="fl performanceRate">
+                <div class="performanceIcon performanceIconNew"></div>
+                <span>新增客户数</span>
+                <p class="performanceRateP">090</p>
+            </div>
+            <div class="fl performanceRate" style="padding-left: 5px;">
+                <div class="performanceIcon performanceIconCon"></div>
+                <span>续保率</span>
+                <p class="performanceRateP">192</p>
+            </div>
+            <div class="fl performanceRate" style="padding-left: 10px;">
+                <div class="performanceIcon performanceIconAdd"></div>
+                <span>加保率</span>
+                <p class="performanceRateP">010</p>
+            </div>
+
+            <p class="totalMonth">本月累计总保费</p>
+            <div class="totalCast">
+                <span class="totalNum totalNumY">1</span>
+                <p class="castP">陈伟</p>
+                <div class="castLine castLineY">
+                    <p>￥80000000</p>
+                    <div></div>
+                </div>
+            </div>
+            <div class="totalCast">
+                <span class="totalNum totalNumY">2</span>
+                <p class="castP">陈伟</p>
+                <div class="castLine castLineY">
+                    <p>￥80000000</p>
+                    <div></div>
+                </div>
+            </div>
+            <div class="totalCast">
+                <span class="totalNum totalNumY">3</span>
+                <p class="castP">陈伟</p>
+                <div class="castLine castLineY">
+                    <p>￥80000000</p>
+                    <div></div>
+                </div>
+            </div>
+            <div class="totalCast">
+                <span class="totalNum totalNumB">4</span>
+                <p class="castP">陈伟</p>
+                <div class="castLine castLineG">
+                    <p>￥80000000</p>
+                    <div></div>
+                </div>
+            </div>
+            <div class="totalCast">
+                <span class="totalNum totalNumB">5</span>
+                <p class="castP">陈伟</p>
+                <div class="castLine castLineG">
+                    <p>￥80000000</p>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
